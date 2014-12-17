@@ -1,1 +1,15 @@
 <h1>commitwith home</h1>
+
+<ul>
+  <% @projects.each do |project| %>
+    <li>
+      <dl>
+        <dt>Title</dt>
+        <dd><%= link_to project.title, project %></dd>
+        <dt>Content</dt>
+        <dd><%= project.description %></dd>
+      </dl>
+    </li>
+  <% end %>
+</ul>
+

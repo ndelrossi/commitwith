@@ -3,7 +3,9 @@ window.Commitwith =
   Collections: {}
   Views: {}
   Routers: {}
-  initialize: -> alert 'Hello from Backbone!'
+  initialize: ->
+    new @Routers.CommitwithRouter
+    Backbone.history.start(pushState: true)
 
 window.App = window.Commitwith
 
