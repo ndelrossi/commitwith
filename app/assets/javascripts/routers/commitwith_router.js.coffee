@@ -4,7 +4,11 @@ class App.Routers.CommitwithRouter extends Backbone.Router
     'projects/:id': 'showProject'
 
   home: ->
-    alert("you requested home page")
+    view = new App.Views.Projects(collection: App.AllProjects)
+    $('#container').html(view.render().el)
 
   showProject: (id) ->
-    alert("you requested showProjects with id #{id}")
+    model = App.AllProjects[id - 1]
+    view = new App.Views.ShowProject(model: model)
+    console.log("you requested showProjects with id #{id}")
+    $('#container').html(view.render().el)

@@ -1,0 +1,12 @@
+<ul>
+  <% for project in @projects: %>
+    <li>
+      <dl>
+        <dt>Title</dt>
+        <dd><a href="/projects/<%= project.id %>"><%= project.title %></a></dd>
+        <dt>Content</dt>
+        <dd><%= project.description %></dd>
+      </dl>
+    </li>
+  <% end %>
+</ul>
