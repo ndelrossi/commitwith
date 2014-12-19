@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  helper_method :projects, :project
 
   def projects
     @projects ||= Project.all

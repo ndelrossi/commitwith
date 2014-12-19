@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'pages#home'
+  root 'projects#index'
 
-  resources :projects, only: [:show]
+  resources :projects, only: [:index, :create, :update, :destroy]
 end
