@@ -1,0 +1,5 @@
+<input type="test" class="project-title" value="<%= @project.get('title') %>" />
+<br />
+<textarea class="project-description"><%= @project.get('description') %></textarea>
+<br />
+<input type="submit" />

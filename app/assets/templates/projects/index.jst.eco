@@ -1,5 +1,5 @@
 <ul>
-  <% for project in @projects: %>
+  <% for project in @projects.models: %>
     <li>
       <dl>
         <dt>Title</dt>
