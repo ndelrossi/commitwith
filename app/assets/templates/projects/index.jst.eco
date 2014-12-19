@@ -3,9 +3,9 @@
     <li>
       <dl>
         <dt>Title</dt>
-        <dd><a href="/projects/<%= project.id %>"><%= project.title %></a></dd>
+        <dd><a href="<%= project.url() %>"><%= project.get('title') %></a></dd>
         <dt>Content</dt>
-        <dd><%= project.description %></dd>
+        <dd><%= project.get('description') %></dd>
       </dl>
     </li>
   <% end %>
