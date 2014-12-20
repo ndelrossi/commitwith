@@ -4,12 +4,28 @@ class App.Views.ShowProject extends Backbone.View
   className: 'project'
 
   events:
-    'click .edit-project': 'showProject'
+    'change': 'save'
+    'keydown .project-title': 'blurIfEnter'
+    'focus .project-title, .project-content': 'beginEditing'
+    'blur .project-title, .project-content': 'endEditing'
 
   render: ->
     @$el.html(@template(project: @model))
     this
 
-  showProject: ->
-    Backbone.history.navigate(@model.url(), trigger: true)
+  save: ->
+    @model.set
+      title: @$('.project-title').val()
+      description: @$('.project-content').val()
+    @model.save()
     false
+
+  blurIfEnter: (e) ->
+    if e.keyCode == 13
+      @$(':input').blur()
+
+  beginEditing: ->
+    @$el.addClass('editing')
+
+  endEditing: ->
+    @$el.removeClass('editing')

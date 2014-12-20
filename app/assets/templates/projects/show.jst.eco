@@ -1,6 +1,10 @@
-<dl>
-  <dt>Title</dt>
-  <dd><a href="#" class="edit-project"><%= @project.get('title') %></a></dd>
-  <dt>Content</dt>
-  <dd><%= @project.get('description') %></dd>
-</dl>
+<header class="title-container">
+  <input type="text" class="project-title" value="<%= @project.get("title") %>" />
+</header>
+
+<div class="body">
+  <textarea class="project-content"><%= @project.get("description") %></textarea>
+</div>
+<div class="footer">
+  <button class="save">Save</button">
+</div>

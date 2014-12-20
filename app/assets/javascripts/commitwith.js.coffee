@@ -5,8 +5,8 @@ window.Commitwith =
   Routers: {}
   initialize: ->
     @AllProjects = new @Collections.Projects(@projectsJson)
-    new @Routers.CommitwithRouter
-    Backbone.history.start(pushState: true)
+    view = new @Views.Projects(collection: @AllProjects)
+    $('#container').html(view.render().el)
 
 window.App = window.Commitwith
 
