@@ -1,15 +1,11 @@
 class App.Views.Projects extends Backbone.View
   template: JST['projects/index']
 
-  events:
-    'click a': 'showProject'
-
   render: ->
-    @$el.html(@template(projects: @collection))
+    @$el.html(@template())
+    @collection.forEach(@renderProject)
     this
 
-  showProject: (e) ->
-    $this = $(e.currentTarget)
-    url = $this.attr("href")
-    Backbone.history.navigate(url, trigger: true)
-    false
+  renderProject: (project) =>
+    view = new App.Views.ShowProject(model: project, tagName: 'li')
+    @$('.projects').append(view.render().el)
