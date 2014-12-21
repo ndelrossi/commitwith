@@ -8,6 +8,7 @@ class App.Views.ShowProject extends Backbone.View
     'keydown .project-title': 'blurIfEnter'
     'focus .project-title, .project-content': 'beginEditing'
     'blur .project-title, .project-content': 'endEditing'
+    'click .destroy-project': 'destroyProject'
 
   render: ->
     @$el.html(@template(project: @model))
@@ -29,3 +30,8 @@ class App.Views.ShowProject extends Backbone.View
 
   endEditing: ->
     @$el.removeClass('editing')
+
+  destroyProject: ->
+    @model.destroy()
+    @remove()
+    false

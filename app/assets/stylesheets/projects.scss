@@ -60,6 +60,19 @@
     display: none;
   }
 
+  .destroy-project {
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    display: none;
+  }
+
+  &:hover {
+    .destroy-project {
+      display: block;
+    }
+  }
+
   &.editing {
     border-color: blue;
 

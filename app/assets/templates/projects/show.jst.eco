@@ -9,3 +9,4 @@
 <div class="footer">
   <button class="save">Save</button">
 </div>
+<button class="destroy-project" tabindex="-1">Remove</button>
