@@ -1,9 +1,10 @@
 <header class="title-container">
-  <input type="text" class="project-title" value="<%= @project.get("title") %>" />
+  <input type="text" class="project-title" value="<%= @project.get("title") %>"
+    placeholder="Title..."/>
 </header>
 
 <div class="body">
-  <textarea class="project-content"><%= @project.get("description") %></textarea>
+  <textarea class="project-content" placeholder="Description..."><%= @project.get("description") %></textarea>
 </div>
 <div class="footer">
   <button class="save">Save</button">
