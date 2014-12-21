@@ -8,8 +8,8 @@ class App.Views.Projects extends Backbone.View
     @listenTo(@collection, 'add', @renderProject)
 
   render: =>
-    @$el.html(@template())
-    @$el.append(@navBar.render().el)
+    @$el.html(@navBar.render().el)
+    @$el.append(@template())
     @collection.forEach(@renderProject)
     @$el.append(@addActions.render().el)
     this
