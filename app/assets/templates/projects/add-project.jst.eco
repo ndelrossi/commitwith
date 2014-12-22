@@ -1,0 +1,5 @@
+<input type="text" class="project-title" placeholder="Title..."/>
+<textarea class="project-content" placeholder="Description..."></textarea>
+<button class="add-project">Add project</button>
+
+
