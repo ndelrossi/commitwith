@@ -4,7 +4,6 @@ class App.Views.ShowProject extends Backbone.View
   className: 'project'
 
   events:
-    'change': 'save'
     'keydown .project-title': 'blurIfEnter'
     'focus .project-title, .project-content': 'beginEditing'
     'blur .project-title, .project-content': 'endEditing'
@@ -13,13 +12,6 @@ class App.Views.ShowProject extends Backbone.View
   render: ->
     @$el.html(@template(project: @model))
     this
-
-  save: ->
-    @model.set
-      title: @$('.project-title').val()
-      description: @$('.project-content').val()
-    @model.save()
-    false
 
   blurIfEnter: (e) ->
     if e.keyCode == 13

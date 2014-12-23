@@ -2,7 +2,8 @@ class App.Views.Projects extends Backbone.View
   template: JST['projects/index']
 
   initialize: ->
-    @navBar = new App.Views.NavBar()
+    @navBar = new App.Views.NavBar(collection: @collection)
+    @listenTo(@collection, 'add', @render)
     @listenTo(@collection, 'reset', @render)
 
   render: =>
