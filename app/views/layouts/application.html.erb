@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "commitwith" %></title>
+    <title>commitwith</title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <div id="container">
+    <div id="app-container">
       <%= yield %>
     </div>
   </body>

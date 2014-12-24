@@ -4,9 +4,8 @@ window.Commitwith =
   Views: {}
   Routers: {}
   initialize: ->
-    @AllProjects = new @Collections.Projects(@projectsJson)
-    view = new @Views.Projects(collection: @AllProjects)
-    $('#container').html(view.render().el)
+    view = new @Views.AppView()
+    $('#app-container').html(view.render().el)
 
 window.App = window.Commitwith
 
