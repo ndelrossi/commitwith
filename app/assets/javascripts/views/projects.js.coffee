@@ -2,14 +2,12 @@ class App.Views.Projects extends Backbone.View
   template: JST['projects/index']
 
   initialize: ->
-    @allProjects = new App.Collections.Projects()
-    @allProjects.fetch()
-    @listenTo(@allProjects, 'add', @render)
-    @listenTo(@allProjects, 'reset', @render)
+    @listenTo(@collection, 'add', @render)
+    @listenTo(@collection, 'reset', @render)
 
   render: =>
     @$el.html(@template())
-    @allProjects.forEach(@renderProject)
+    @collection.forEach(@renderProject)
     this
 
   renderProject: (project) =>
