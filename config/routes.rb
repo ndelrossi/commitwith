@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  root 'application#index'
+  root 'home#index'
 
-  resources :application, only: [:index]
+  resources :home, only: [:index]
   resources :projects, only: [:index, :create, :update, :destroy]
   
-  get '*any' => 'application#index'
+  get '*any' => 'home#index'
 end
