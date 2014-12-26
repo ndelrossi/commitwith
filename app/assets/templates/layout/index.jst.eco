@@ -1,0 +1,33 @@
+<div class=fixed">
+  <nav class="top-bar hide-for-small" data-topbar role="navigation"></nav>
+</div>
+
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar show-for-small">
+        <a class="left-off-canvas-toggle menu-icon"><span>Commitwith</span></a>
+    </nav>
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list left-nav-links-container">
+      </ul>
+    </aside>
+
+    <section class="main-section">
+      <div class="large-3 medium-4 columns side-bar-container">
+        <div class="hide-for-small">
+          <div class="side-bar">
+          </div>
+        </div>
+      </div>
+      <div class="main-content-container">
+      </div>
+    </section>
+
+    <a class="exit-off-canvas"></a>
+  </div>
+</div>
+
+
+
+
+
