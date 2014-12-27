@@ -9,8 +9,8 @@ class App.Views.HomeView extends Backbone.View
 
   render: ->
     @$el.html(@template())
-    @$('.top-bar').append(@topNavView.render().el)
-    @$('.side-bar').append(@sideNavView.render().el)
+    @topNavView.setElement(@$('.top-bar')).render()
+    @sideNavView.setElement(@$('.side-bar')).render()
+    @leftNavLinksView.setElement(@$('.left-nav-links-container')).render()
     @$('.main-content-container').append(@projectsView.render().el)
-    @$('.left-nav-links-container').append(@leftNavLinksView.render().el)
     this
