@@ -14,3 +14,10 @@ class App.Views.HomeView extends Backbone.View
     @leftNavLinksView.setElement(@$('.left-nav-links-container')).render()
     @$('.main-content-container').append(@projectsView.render().el)
     this
+
+  remove: ->
+    @topNavView.remove(arguments...)
+    @sideNavView.remove(arguments...)
+    @leftNavLinksView.remove(arguments...)
+    @projectsView.remove(arguments...)
+    super(arguments...)
