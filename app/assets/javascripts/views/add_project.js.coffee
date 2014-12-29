@@ -1,8 +1,6 @@
 class App.Views.AddProject extends Backbone.View
   template: JST['projects/add-project']
 
-  className: 'add-project'
-
   events:
     'click .add-project-btn': 'addProject'
 

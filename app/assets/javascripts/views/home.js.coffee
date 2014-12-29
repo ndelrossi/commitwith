@@ -2,7 +2,7 @@ class App.Views.HomeView extends Backbone.View
   template: JST['layout/index']
 
   initialize: ->
-    @topNavView = new App.Views.TopNav(collection: @collection)
+    @topNavView = new App.Views.TopNav()
     @sideNavView = new App.Views.SideNav(collection: @collection)
     @projectsView = new App.Views.Projects(collection: @collection)
     @leftNavLinksView = new App.Views.LeftNavLinks(collection: @collection)

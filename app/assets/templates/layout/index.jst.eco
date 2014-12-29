@@ -13,15 +13,18 @@
     </aside>
 
     <section class="main-section">
+      <div class=row">
       <div class="large-3 medium-4 columns side-bar-container">
         <div class="hide-for-small">
           <div class="side-bar">
           </div>
         </div>
       </div>
-      <div class="main-content-container">
+      <div class="large-9 medium-8 columns main-content-container">
         <div class="welcome"></div>
+        <div class="option-panel"></div>
         <div class="project-list"></div>
+      </div>
       </div>
     </section>
 

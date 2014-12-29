@@ -4,15 +4,3 @@
   </li>
   <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 </ul>
-
-<section class="top-bar-section">
-  <!-- Right Nav Section -->
-  <ul class="right">
-    <li class="has-dropdown"><a href="#" data-dropdown="add-project">Add Project</a></li>
-  </ul>
-</section>
-
-<div id="add-project" class="f-dropdown small content" data-dropdown-content>
-</div>
-
-
