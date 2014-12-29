@@ -20,6 +20,8 @@
         </div>
       </div>
       <div class="main-content-container">
+        <div class="welcome"></div>
+        <div class="project-list"></div>
       </div>
     </section>
 
