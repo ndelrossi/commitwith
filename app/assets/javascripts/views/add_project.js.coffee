@@ -14,10 +14,3 @@ class App.Views.AddProject extends Backbone.View
       description: @$('.project-content').val()
     })
     false
-
-  save: ->
-    @model.set
-      title: @$('.project-title').val()
-      description: @$('.project-content').val()
-    @model.save()
-    false

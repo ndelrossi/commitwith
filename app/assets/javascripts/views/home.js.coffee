@@ -6,7 +6,7 @@ class App.Views.HomeView extends Backbone.View
     @sideNavView = new App.Views.SideNav(collection: @collection)
     @projectsView = new App.Views.Projects(collection: @collection)
     @leftNavLinksView = new App.Views.LeftNavLinks(collection: @collection)
-    @welcomeView = new App.Views.Welcome()
+    @welcomeView = new App.Views.Welcome(collection: @collection)
 
   render: ->
     @$el.html(@template())
