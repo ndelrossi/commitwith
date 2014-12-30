@@ -1,2 +1,1 @@
-<td><%= @project.get("title") %></td>
-<td><%= @project.get("description") %></td>
+<p><%= @project.get("title") %>: <%= @project.get("description") %></p>
