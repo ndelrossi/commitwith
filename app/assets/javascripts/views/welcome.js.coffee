@@ -1,9 +1,6 @@
 class App.Views.Welcome extends Backbone.View
   template: JST['layout/welcome']
 
-  initialize: ->
-    @addProjectView = new App.Views.AddProject(collection: @collection)
-
   events:
     'click #new-project-view': 'renderAddProject'
 
@@ -12,6 +9,7 @@ class App.Views.Welcome extends Backbone.View
     this
 
   renderAddProject: ->
+    @addProjectView = new App.Views.AddProject(collection: @collection)
     repo_id = $('#new-project-title').val()
     repo = new App.Models.Repo({id: repo_id})
     @$el.append(@addProjectView.render().el)

@@ -13,4 +13,4 @@ class App.Views.AddProject extends Backbone.View
       title: @$('.project-title').val()
       description: @$('.project-content').val()
     })
-    false
+    @.remove()
