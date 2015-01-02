@@ -1,1 +1,2 @@
 <p><%= @project.get("title") %>: <%= @project.get("description") %></p>
+<p>Language: <%= @project.get("language") %></p>

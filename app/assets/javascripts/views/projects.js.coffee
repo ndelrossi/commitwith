@@ -4,6 +4,7 @@ class App.Views.Projects extends Backbone.View
   initialize: ->
     @listenTo(@collection, 'add', @render)
     @listenTo(@collection, 'reset', @render)
+    @listenTo(@collection, 'change', @render)
 
   render: =>
     @$el.html(@template())
