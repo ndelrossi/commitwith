@@ -4,5 +4,8 @@ class App.Models.Project extends Backbone.Model
     @repo = new App.Models.Repo({id: "/" + @get("author") + "/" + @get("title")})
     @repo.fetch({
       success: (data) =>
-        @set({language: @repo.get("language")})
+        @set({
+          language: @repo.get("language"),
+          description: @repo.get("description")
+        })
     })
