@@ -14,17 +14,15 @@
 
     <section class="main-section">
       <div class=row">
-      <div class="large-3 medium-4 columns side-bar-container">
-        <div class="hide-for-small">
-          <div class="side-bar">
+        <div class="large-2 medium-3 columns side-bar-container">
+          <div class="hide-for-small">
+            <div class="side-bar"></div>
           </div>
         </div>
-      </div>
-      <div class="large-9 medium-8 columns main-content-container">
-        <div class="welcome"></div>
-        <div class="option-panel"></div>
-        <div class="project-list"></div>
-      </div>
+        <div class="large-10 medium-9 columns main-content-container">
+          <div class="welcome"></div>
+          <div class="project-list"></div>
+        </div>
       </div>
     </section>
 
