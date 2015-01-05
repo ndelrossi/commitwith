@@ -1,16 +1,18 @@
 <h5>Welcome to Commitwith. We help connect developers with open-source projects.</h5>
 
 <form>
-  <div class="row">
-    <div class="large-6 columns">
-      <div class="row collapse">
-        <div class="small-10 columns">
-          <input type="text" id="new-project-title" placeholder="Project name">
-        </div>
-        <div class="small-2 columns">
-          <a href="#" id="new-project-view" class="button postfix">Add</a>
+  <div class="small-12 columns no-padding">
+    <div class="large-6 columns end no-padding">
+      <label>Github Repository URL
+        <div class="row collapse">
+          <div class="small-10 columns">
+            <input type="text" id="new-project-title" placeholder="e.g. https://github.com/ndelrossi/commitwith.git">
+          </div>
+          <div class="small-2 columns">
+            <a href="#" id="new-project-view" class="button postfix">Add</a>
+          </div>
         </div>
       </div>
-    </div>
+    </label>
   </div>
 </form>
