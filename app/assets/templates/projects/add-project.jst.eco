@@ -1,3 +1,26 @@
-<input type="text" class="project-title" />
-<textarea class="project-content"></textarea>
-<button class="add-project-btn">Add project</button>
+<div class="small-10 small-offset-1 end">
+
+  <form>
+    <fieldset>
+      <legend>Add project to listing</legend>
+      <div class="row">
+        <div class="medium-4 columns">
+          <label>Repo name
+            <input type="text" class="project-title" />
+          </label>
+          <label>Description
+            <textarea class="project-content"></textarea>
+          </label>
+        </div>
+        <div class="medium-4 columns"></div>
+        <div class="medium-4 columns"></div>
+      </div>
+      <div class=row">
+        <div class="small-12 columns">
+          <button class="add-project-btn button small">Add project</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+</div>
