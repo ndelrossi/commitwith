@@ -11,6 +11,6 @@ class App.Views.AddProject extends Backbone.View
   addProject: ->
     @collection.create({
       title: @$('.project-title').val()
-      description: @$('.project-content').val()
+      author: "ndelrossi"
     })
     @.remove()
