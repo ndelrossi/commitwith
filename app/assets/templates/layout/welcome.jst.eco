@@ -1,8 +1,12 @@
-<h5>Welcome to Commitwith. We help connect developers with open-source projects.</h5>
 
+<div class="medium-5 medium-offset-1 columns">
+  <h3>Find a project</h3>
+  <h5>We help connect developers with open-source projects.</h5>
+</div>
+
+<div class="medium-5 columns end">
+  <h3>Add your project</h3>
 <form>
-  <div class="small-12 columns no-padding">
-    <div class="large-6 columns end no-padding">
       <label>Github Repository URL
         <div class="row collapse">
           <div class="small-10 columns">
@@ -12,7 +16,6 @@
             <a href="#" id="new-project-view" class="button postfix">Add</a>
           </div>
         </div>
-      </div>
     </label>
-  </div>
 </form>
+</div>
