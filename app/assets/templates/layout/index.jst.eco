@@ -1,11 +1,21 @@
-<div class=fixed">
-  <nav class="top-bar hide-for-small" data-topbar role="navigation"></nav>
-</div>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Commitwith</a>
+    </div>
+  </div
+</div
 
 <div class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap">
-    <nav class="tab-bar show-for-small">
-        <a class="left-off-canvas-toggle menu-icon"><span>Commitwith</span></a>
+    <nav class="tab-bar">
+        <a class="left-off-canvas-toggle menu-icon"><span id="logo">Commitwith</span></a>
     </nav>
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list left-nav-links-container">
@@ -13,14 +23,8 @@
     </aside>
 
     <section class="main-section">
-      <div class="welcome small-12 columns"></div>
       <div class=row">
-        <div class="large-2 medium-3 columns side-bar-container">
-          <div class="hide-for-small">
-            <div class="side-bar"></div>
-          </div>
-        </div>
-        <div class="large-10 medium-9 columns main-content-container">
+        <div class="medium-10 medium-offset-1 columns main-content-container">
           <div class="project-list"></div>
         </div>
       </div>

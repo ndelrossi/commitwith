@@ -10,9 +10,9 @@ gem 'uglifier', '~> 2.6.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
-gem 'foundation-rails', '5.5.0.0'
 gem 'backbone-on-rails', '~> 1.1.2.0'
 gem 'lodash-rails', '~> 2.4.1'
+gem "twitter-bootstrap-rails"
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
