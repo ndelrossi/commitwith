@@ -1,3 +1,36 @@
+body {
+  margin-top: 60px;
+}
+
+.navbar-brand-basic {
+  display: inline-block;
+  float: none;
+  text-align: center;
+  padding: 15px 15px;
+  font-size: 16px;
+  line-height: 20px;
+  height: 50px;
+  color: #777;
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+.navbar-header {
+  h5 {
+    color: white;
+  }
+}
+
 .no-padding {
   padding: 0 !important;
 }

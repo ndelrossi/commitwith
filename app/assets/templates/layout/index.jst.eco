@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -7,10 +7,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Commitwith</a>
+      <span class="navbar-brand visible-xs">Commitwith</span>
     </div>
-  </div
-</div
+    <div class="collapse navbar-collapse">
+      <span class="navbar-brand-basic hidden-xs">Commitwith - connecting developers with open-source projects</span>
+    </div>
+  </div>
+</nav>
+
+
 
 <div class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap">
