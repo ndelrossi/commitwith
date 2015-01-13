@@ -2,7 +2,7 @@ body {
   margin-top: 60px;
 }
 
-// Navbar
+// Top Navbar
 
 .navbar-brand-basic {
   display: inline-block;
@@ -20,6 +20,17 @@ body {
   .navbar .navbar-collapse {
     text-align: center;
   }
+}
+
+// Projects Nav
+
+.search-box {
+  padding-bottom: 5px;
+}
+
+.projects-nav {
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 // Project

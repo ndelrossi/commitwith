@@ -13,4 +13,4 @@ class App.Views.Projects extends Backbone.View
 
   renderProject: (project) =>
     view = new App.Views.ShowProject(model: project)
-    $('.project-list').append(view.render().el)
+    $('.projects-list').append(view.render().el)
