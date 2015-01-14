@@ -19,13 +19,23 @@
         </ul>
       </div>
 
-      <div class="btn-group pull-right">
+      <div id="repo-dropdown-button" class="btn-group pull-right">
         <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
           Add Project <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="#">Action</a></li>
-        </ul>
+        <div class="dropdown-menu" style="padding:17px;">
+          <form class="form" id="form-repo"> 
+             <div class="form-group">
+                <label for="repo-input">Github repo URL</label>
+                <div class="input-group">
+                  <input type="text" id="repo-input" class="form-control" placeholder="e.g. https://github.com/ndelrossi/commitwith.git">
+                  <span class="input-group-btn">
+                    <button id="find-repo" class="btn btn-default" type="button">Find</button>
+                  </span>
+                </div>
+             </div>
+          </form>
+        </div>
       </div>
     </div>
   </nav>

@@ -3,4 +3,10 @@ class App.Views.ProjectsNav extends Backbone.View
 
   render: ->
     @$el.html(@template())
-    this
+    this.afterRender()
+
+  afterRender: ->
+    @$(".dropdown-menu").find("form").click (e) ->
+      e.stopPropagation()
+    @$("#find-repo").click =>
+      @$('#repo-dropdown-button').removeClass('open')
