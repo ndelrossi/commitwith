@@ -9,10 +9,11 @@ class App.Views.ProjectsNav extends Backbone.View
     this.afterRender()
 
   afterRender: ->
-    @$(".dropdown-menu").find("form").click (e) ->
+    @$(".dropdown-menu #repo-input").click (e) ->
       e.stopPropagation()
 
   openProjectBuilder: ->
-    @$('#repo-dropdown-button').removeClass('open')
-    @addProjectView = new App.Views.AddProject()
-    @$el.append(@addProjectView.render().el)
+    #@addProjectView = new App.Views.AddProject()
+    #@$el.append(@addProjectView.render().el)
+    $(".errors").html('<div class="alert alert-danger alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Repo not found. Please check URL</div>')

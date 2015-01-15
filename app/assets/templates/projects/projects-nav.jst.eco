@@ -23,7 +23,7 @@
         <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
           Add Project <span class="caret"></span>
         </button>
-        <div id="repo-dropdown-div" class="dropdown-menu">
+        <div id="repo-dropdown-container" class="dropdown-menu">
           <label for="repo-input">Github repo URL</label>
           <div class="input-group">
             <input type="text" id="repo-input" class="form-control" placeholder="e.g. https://github.com/ndelrossi/commitwith.git">

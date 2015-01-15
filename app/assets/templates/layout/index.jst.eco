@@ -16,7 +16,10 @@
 </nav>
 
 <section class="main-section">
-  <div class=row">
+  <div class="row">
+    <div class="col-xs-12 errors"</div>
+  </div>
+  <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <div class="projects-nav"></div>
       <div class="projects-list"></div>
