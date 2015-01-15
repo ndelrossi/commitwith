@@ -1,26 +1,26 @@
-<div class="small-10 small-offset-1 end">
-
-  <form>
-    <fieldset>
-      <legend>Add project to listing</legend>
-      <div class="row">
-        <div class="medium-4 columns">
-          <label>Repo name
-            <input type="text" class="project-title" />
-          </label>
-          <label>Description
-            <textarea class="project-content"></textarea>
-          </label>
-        </div>
-        <div class="medium-4 columns"></div>
-        <div class="medium-4 columns"></div>
+<div class="modal fade" id="add-project-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Add Project</h4>
       </div>
-      <div class=row">
-        <div class="small-12 columns">
-          <button class="add-project-btn button small">Add project</button>
-        </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
       </div>
-    </fieldset>
-  </form>
-
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add Project</button>
+      </div>
+    </div>
+  </div>
 </div>

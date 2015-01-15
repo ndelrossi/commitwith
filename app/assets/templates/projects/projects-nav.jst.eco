@@ -23,18 +23,14 @@
         <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
           Add Project <span class="caret"></span>
         </button>
-        <div class="dropdown-menu" style="padding:17px;">
-          <form class="form" id="form-repo"> 
-             <div class="form-group">
-                <label for="repo-input">Github repo URL</label>
-                <div class="input-group">
-                  <input type="text" id="repo-input" class="form-control" placeholder="e.g. https://github.com/ndelrossi/commitwith.git">
-                  <span class="input-group-btn">
-                    <button id="find-repo" class="btn btn-default" type="button">Find</button>
-                  </span>
-                </div>
-             </div>
-          </form>
+        <div id="repo-dropdown-div" class="dropdown-menu">
+          <label for="repo-input">Github repo URL</label>
+          <div class="input-group">
+            <input type="text" id="repo-input" class="form-control" placeholder="e.g. https://github.com/ndelrossi/commitwith.git">
+            <span class="input-group-btn">
+              <button id="find-repo" class="btn btn-default" type="button">Find</button>
+            </span>
+          </div>
         </div>
       </div>
     </div>

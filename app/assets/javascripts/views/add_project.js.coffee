@@ -6,6 +6,8 @@ class App.Views.AddProject extends Backbone.View
 
   render: ->
     @$el.html(@template())
+    console.log("rendering addproject view")
+    @$('#add-project-modal').modal('show')
     this
 
   addProject: ->
