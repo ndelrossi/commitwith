@@ -24,13 +24,15 @@
           Add Project <span class="caret"></span>
         </button>
         <div id="repo-dropdown-container" class="dropdown-menu">
-          <label for="repo-input">Github repo URL</label>
-          <div class="input-group">
-            <input type="text" id="repo-input" class="form-control" placeholder="e.g. https://github.com/ndelrossi/commitwith.git">
-            <span class="input-group-btn">
-              <button id="find-repo" class="btn btn-default" type="button">Find</button>
-            </span>
+          <div class="form-group">
+            <label for="repo-name">Github repo name</label>
+            <input type="text" class="form-control" id="repo-name" placeholder="Enter name">
           </div>
+          <div class="form-group">
+            <label for="repo-owner">Github repo owner name</label>
+            <input type="text" class="form-control" id="repo-owner" placeholder="Enter owner">
+          </div>
+          <button id="find-repo" class="btn btn-default" type="button">Find</button>
         </div>
       </div>
     </div>
