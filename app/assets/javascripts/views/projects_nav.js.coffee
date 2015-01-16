@@ -17,8 +17,8 @@ class App.Views.ProjectsNav extends Backbone.View
     @$el.append(@addProjectView.render().el)
 
   displayError: ->
-    $(".errors").html('<div class="alert alert-danger alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Repo not found.</div>')
+    @errorView = new App.Views.Errors(message: "Repo not found.")
+    @errorView.render()
 
   checkRepoURL: ->
     name = @$('#repo-name').val().toLowerCase()
