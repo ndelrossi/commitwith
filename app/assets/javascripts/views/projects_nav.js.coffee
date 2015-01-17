@@ -13,7 +13,7 @@ class App.Views.ProjectsNav extends Backbone.View
       e.stopPropagation()
 
   openProjectBuilder: (repo) ->
-    @addProjectView = new App.Views.AddProject()
+    @addProjectView = new App.Views.AddProject(collection: @collection, repo: repo)
     @$el.append(@addProjectView.render().el)
 
   displayError: ->
