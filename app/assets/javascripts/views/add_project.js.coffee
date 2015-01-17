@@ -5,7 +5,7 @@ class App.Views.AddProject extends Backbone.View
     @repo = options.repo
 
   events:
-    'click .add-project-btn': 'addProject'
+    'click #modal-add-project': 'addProject'
 
   render: ->
     @$el.html(@template(repo: @repo))
@@ -13,8 +13,9 @@ class App.Views.AddProject extends Backbone.View
     this
 
   addProject: ->
+    $('.modal-backdrop').remove()
     @collection.create({
-      title: @$('.project-title').val()
-      author: "ndelrossi"
+      title: @repo.get('name')
+      author: @repo.get('owner').login
     })
-    @.remove()
+    @remove()
