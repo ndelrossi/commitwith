@@ -1,2 +1,3 @@
-<p><%= @project.get("title") %>: <%= @project.get("description") %></p>
-<p>Language: <%= @project.get("language") %></p>
+<td><h4 class="project-name"><%= @project.get("title") %></h4><%= @project.get("description") %></td>
+<td><%= @project.get("owner") %></td>
+<td><%= @project.get("language") %></td>

@@ -1,1 +1,13 @@
 <p>Listing X of X projects:<p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Owner</th>
+      <th>Language</th>
+    </tr>
+  <thead>
+  <tbody class="projects-table-body">
+  </tbody>
+</table>

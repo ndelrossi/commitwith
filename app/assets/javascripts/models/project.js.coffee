@@ -7,5 +7,6 @@ class App.Models.Project extends Backbone.Model
         @set({
           language: @repo.get("language"),
           description: @repo.get("description")
+          owner: @repo.get("owner").login
         })
     })

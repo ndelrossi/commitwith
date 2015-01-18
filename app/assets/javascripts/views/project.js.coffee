@@ -1,6 +1,8 @@
 class App.Views.ShowProject extends Backbone.View
   template: JST['projects/show']
 
+  tagName: 'tr'
+
   className: 'project'
 
   events:
