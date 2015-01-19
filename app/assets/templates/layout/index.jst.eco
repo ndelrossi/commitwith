@@ -9,7 +9,7 @@
       <span class="navbar-brand visible-xs">Commitwith</span>
     </div>
     <div class="collapse navbar-collapse">
-      <span class="navbar-brand navbar-brand-basic hidden-xs">Commitwith - connecting developers with open-source projects</span>
+      <span class="navbar-brand-basic hidden-xs">Commitwith - connecting developers with open-source projects</span>
     </div>
 </nav>
 
