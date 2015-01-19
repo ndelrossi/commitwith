@@ -10,6 +10,6 @@ class App.Models.Project extends Backbone.Model
           owner: @repo.get("owner").login
           open_issues_count: @repo.get("open_issues_count")
           size: @repo.get("size")
-          last_update: @repo.get("updated_at")
+          last_update: @repo.get("updated_at").split("T")[0]
         })
     })
