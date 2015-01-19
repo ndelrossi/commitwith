@@ -20,3 +20,9 @@
       <div class="projects-list"></div>
     </div>
 </section>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <h5 class="text-danger text-center">This website is in early development. 
+    Feel free to try it out but many freatures are not implented or broken.
+    <a href="https://github.com/ndelrossi/commitwith">View project on Github</a></h5>
+</nav>
