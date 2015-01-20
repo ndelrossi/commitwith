@@ -1,4 +1,4 @@
-<td><h4 class="project-name"><%= @project.get("title") %></h4><%= @project.get("description") %></td>
+<td class="col-md-5 col-xs-3"><h4 class="project-name"><%= @project.get("title") %></h4><%= @project.get("description") %></td>
 <td><%= @project.get("owner") %></td>
 <td><%= @project.get("language") %></td>
 <td><%= @project.get("size") %></td>
