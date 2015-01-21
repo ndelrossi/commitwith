@@ -5,11 +5,11 @@ feature "Visitor adds project" do
     visit root_path
 
     click_button "Add Project"
-    fill_in "repo-name", with: "commitwith"
-    fill_in "repo-owner", with: "ndelrossi"
+    fill_in "repo-name", with: "octopress"
+    fill_in "repo-owner", with: "imathis"
     click_button "find-repo"
     click_button "modal-add-project"
 
-    expect(page).to have_content("ndelrossi")
+    expect(page).to have_content("octopress")
   end
 end
