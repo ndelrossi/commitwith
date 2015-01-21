@@ -23,8 +23,9 @@ gem 'capistrano-rvm', github: "capistrano/rvm"
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-group :developtment, :test do
+group :development, :test do
   gem 'rspec-rails', '3.1.0'
+  gem 'factory_girl_rails'
 end
 
 group :development do
@@ -39,7 +40,6 @@ group :test do
   gem 'capybara'
   gem 'capybara-webkit'
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
   gem 'shoulda-matchers'
 end
 
