@@ -41,6 +41,7 @@ group :test do
   gem 'capybara-webkit'
   gem 'database_cleaner'
   gem 'shoulda-matchers'
+  gem 'database_cleaner'
 end
 
 # Use ActiveModel has_secure_password
