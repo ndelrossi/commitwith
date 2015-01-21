@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :project do
-    title "MyString"
-description "MyText"
+    title "commitwith"
+    author "ndelrossi"
   end
-
 end
