@@ -1,3 +1,7 @@
-<script>
-  Commitwith.projectsJson = <%= raw @projects.to_json %>
-</script>
+<%= content_for :javascript do -%>
+  <script type="text/javascript">
+    $(function () {
+      Commitwith.initialize({ projectsJson: <%= raw @projects.to_json %> });
+    });
+  </script>
+<% end %>
