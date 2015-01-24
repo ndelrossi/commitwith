@@ -10,13 +10,10 @@
     </div>
     <div class="col-sm-5">
       <div class="btn-group">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+        <button id="button-filter-projects" type="button" class="btn btn-primary">
           <span class="fa fa-navicon"> </span>
-          Filter <span class="caret"></span>
+          Filter
         </button>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="#">Action</a></li>
-        </ul>
       </div>
 
       <div id="repo-dropdown-button" class="btn-group pull-right">

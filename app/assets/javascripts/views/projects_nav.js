@@ -2,7 +2,8 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
   template: JST['projects/projects-nav'],
 
   events: {
-    'click #find-repo': 'checkRepoURL'
+    'click #find-repo': 'checkRepoURL',
+    'click #button-filter-projects': 'openFilters'
   },
 
   render: function() {
@@ -39,5 +40,11 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
         self.displayError();
       },
     });
+  },
+  
+  openFilters: function() {
+    console.log("test");
+    this.filterProjectsView = new Commitwith.Views.FilterProjects();
+    this.$el.append(this.filterProjectsView.render().el);
   }
 });
