@@ -16,5 +16,9 @@ Commitwith.Models.Project = Backbone.Model.extend({
         });
       }
     });
+  },
+
+  hasLanguage: function(language) {
+    return this.get('language') === language;
   }
 });

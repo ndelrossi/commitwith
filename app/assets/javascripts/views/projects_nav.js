@@ -21,6 +21,11 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
     this.addProjectView = new Commitwith.Views.AddProject({collection: this.collection, repo: repo});
     this.$el.append(this.addProjectView.render().el);
   },
+  
+  openFilters: function() {
+    this.filterProjectsView = new Commitwith.Views.FilterProjects({collection: this.collection});
+    this.$el.append(this.filterProjectsView.render().el);
+  },
 
   displayError: function() {
     this.errorView = new Commitwith.Views.Errors({message: "Repo not found."});
@@ -40,11 +45,5 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
         self.displayError();
       },
     });
-  },
-  
-  openFilters: function() {
-    console.log("test");
-    this.filterProjectsView = new Commitwith.Views.FilterProjects();
-    this.$el.append(this.filterProjectsView.render().el);
   }
 });
