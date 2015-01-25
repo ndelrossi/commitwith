@@ -3,7 +3,7 @@ Commitwith.Collections.Projects = Backbone.Collection.extend({
   model: Commitwith.Models.Project,
 
   byLanguage: function(language) {
-    var filteredProjects = this.select(function(project) {
+    var filteredProjects = Commitwith.OriginalProjects.select(function(project) {
       return project.hasLanguage(language);
     });
     return filteredProjects;
