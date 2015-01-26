@@ -11,5 +11,12 @@ Commitwith.Collections.Projects = Backbone.Collection.extend({
       return project.hasLanguage(language);
     });
     return filteredProjects;
+  },
+
+  byCategory: function(category) {
+    var filteredProjects = Commitwith.OriginalProjects.select(function(project) {
+      return project.hasCategory(category);
+    });
+    return filteredProjects;
   }
 });

@@ -2,7 +2,7 @@
   <nav>
     <div class="col-sm-7">
       <div class="input-group search-box">
-        <input type="text" class="form-control" placeholder="Search for...">
+        <input type="text" class="form-control" placeholder="Search for... (not implemented yet)">
         <span class="input-group-btn">
           <button class="btn btn-primary" type="button"><span class="fa fa-search"></span></button>
         </span>
