@@ -1,4 +1,4 @@
-<p>Listing <%= @currentSize %> of <%= @totalSize %> projects:<p>
+<h4>Listing <%= @currentSize %> of <%= @totalSize %> projects:</h4>
 
 <table class="table table-condensed table-hover">
   <thead>
