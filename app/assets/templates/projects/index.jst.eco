@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>Project</th>
-      <th>Owner</th>
+      <th>Category</th>
       <th>Language</th>
       <th>Size(kb)</th>
       <th>Open Issues</th>

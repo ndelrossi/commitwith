@@ -19,7 +19,8 @@ Commitwith.Views.AddProject = Backbone.View.extend({
     $('.modal-backdrop').remove();
     this.collection.create({
       title: this.repo.get('name'),
-      author: this.repo.get('owner').login
+      author: this.repo.get('owner').login,
+      category: this.$( "#select-category" ).val()
     })
     this.remove();
   }

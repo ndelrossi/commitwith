@@ -1,5 +1,5 @@
 <td class="col-md-5 col-xs-3"><h4 class="project-name"><%= @project.get("title") %></h4><%= @project.get("description") %></td>
-<td><%= @project.get("owner") %></td>
+<td><%= @project.get("category") %></td>
 <td><%= @project.get("language") %></td>
 <td><%= @project.get("size") %></td>
 <td><%= @project.get("open_issues_count") %></td>
