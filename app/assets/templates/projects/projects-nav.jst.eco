@@ -16,6 +16,13 @@
         </button>
       </div>
 
+      <div class="btn-group">
+        <button id="button-reset-projects" type="button" class="btn btn-warning">
+          Reset
+          <span class="fa fa-refresh"></span>
+        </button>
+      </div>
+
       <div id="repo-dropdown-button" class="btn-group pull-right">
         <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
           Add Project <span class="caret"></span>

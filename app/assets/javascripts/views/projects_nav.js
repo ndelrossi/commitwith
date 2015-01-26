@@ -3,7 +3,8 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
 
   events: {
     'click #find-repo': 'checkRepoURL',
-    'click #button-filter-projects': 'openFilters'
+    'click #button-filter-projects': 'openFilters',
+    'click #button-reset-projects': 'resetProjectsList'
   },
 
   render: function() {
@@ -25,6 +26,10 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
   openFilters: function() {
     this.filterProjectsView = new Commitwith.Views.FilterProjects({collection: this.collection});
     this.$el.append(this.filterProjectsView.render().el);
+  },
+
+  resetProjectsList: function() {
+    this.collection.reset(this.collection.all());
   },
 
   displayError: function() {

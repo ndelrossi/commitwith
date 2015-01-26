@@ -13,8 +13,7 @@ Commitwith.Views.FilterProjects = Backbone.View.extend({
 
   updateList: function(e) {
     $('.modal-backdrop').remove();
-    var rubyItems = this.collection.byLanguage(e.target.text);
-    this.collection.reset(rubyItems);
+    this.collection.reset(this.collection.byLanguage(e.target.text));
     this.remove();
   }
 });
