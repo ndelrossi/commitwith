@@ -7,8 +7,8 @@
       <th>Category</th>
       <th>Language</th>
       <th>Size(kb)</th>
-      <th>Open Issues</th>
-      <th>Last Update</th>
+      <th>Open<br>Issues</th>
+      <th>Last<br>Update</th>
     </tr>
   <thead>
   <tbody class="projects-table-body">
