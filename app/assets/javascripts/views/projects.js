@@ -8,7 +8,7 @@ Commitwith.Views.Projects = Backbone.View.extend({
   },
 
   render: function() {
-    this.$el.html(this.template());
+    this.$el.html(this.template({currentSize: this.collection.length, totalSize: Commitwith.OriginalProjects.length}));
     this.collection.forEach(this.renderProject);
     return this;
   },
