@@ -20,8 +20,17 @@ Commitwith.Views.AddProject = Backbone.View.extend({
     this.collection.create({
       title: this.repo.get('name'),
       author: this.repo.get('owner').login,
-      category: this.$( "#select-category" ).val()
+      category: this.$( "#select-category" ).val(),
+      skill: this.getSkills()
     })
     this.remove();
+  },
+
+  getSkills: function() {
+    var skills = ""
+    this.$('.checkbox-skill:checked').each(function() {
+      skills += $(this).val() + " ";
+    });
+    return skills.trim();
   }
 });
