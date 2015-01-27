@@ -21,7 +21,7 @@ Commitwith.Views.ShowProject = Backbone.View.extend({
 
   displaySkills: function() {
     this.$('.skill').each(function() {
-      $(this).html($(this).html().replace(" ", "<br>"));
+      $(this).html($(this).html().replace(/\s/g, "<br>"));
     });
   }
 });
