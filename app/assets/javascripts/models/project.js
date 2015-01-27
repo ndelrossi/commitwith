@@ -22,6 +22,11 @@ Commitwith.Models.Project = Backbone.Model.extend({
     return this.get('language') === language;
   },
 
+  hasSkill: function(skill) {
+    var regex = new RegExp(skill, 'g');
+    return (this.get('skill') || " ").match(regex);
+  },
+
   hasCategory: function(category) {
     return this.get('category') === category;
   }

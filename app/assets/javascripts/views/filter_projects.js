@@ -3,7 +3,8 @@ Commitwith.Views.FilterProjects = Backbone.View.extend({
 
   events: {
     'click .filter-language': 'updateLanguage',
-    'click .filter-category': 'updateCategory'
+    'click .filter-category': 'updateCategory',
+    'click .filter-skill': 'updateSkill'
   },
 
   render: function() {
@@ -21,6 +22,12 @@ Commitwith.Views.FilterProjects = Backbone.View.extend({
   updateCategory: function(e) {
     $('.modal-backdrop').remove();
     this.collection.reset(this.collection.byCategory(e.target.text));
+    this.remove();
+  },
+
+  updateSkill: function(e) {
+    $('.modal-backdrop').remove();
+    this.collection.reset(this.collection.bySkill(e.target.text));
     this.remove();
   }
 });

@@ -16,6 +16,13 @@ Commitwith.Collections.Projects = Backbone.Collection.extend({
     return filteredProjects;
   },
 
+  bySkill: function(skill) {
+    var filteredProjects = Commitwith.OriginalProjects.select(function(project) {
+      return project.hasSkill(skill);
+    });
+    return filteredProjects;
+  },
+
   byCategory: function(category) {
     var filteredProjects = Commitwith.OriginalProjects.select(function(project) {
       return project.hasCategory(category);
