@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 feature "visitor filters projects" do
-  let!(:project1) { create(:project, title: "rails", author: "rails", category: "Web") }
-  let!(:project2) { create(:project, title: "glide", author: "bumptech", category: "Android") }
+  let!(:project1) { create(:project, title: "rails", author: "rails", category: "Web", skill: "Beginner") }
+  let!(:project2) { create(:project, title: "glide", author: "bumptech", category: "Android", skill: "Advanced") }
   
   
   before do
@@ -20,6 +20,14 @@ feature "visitor filters projects" do
   scenario "visitor filters projects by category", js: true do
     click_button "Filter"
     click_link "Android"
+
+    expect(page).to have_content("glide")
+    expect(page).not_to have_content("rails") 
+  end
+
+  scenario "visitor filters projects by skill level", js: true do
+    click_button "Filter"
+    click_link "Advanced"
 
     expect(page).to have_content("glide")
     expect(page).not_to have_content("rails") 
