@@ -9,24 +9,10 @@ Commitwith.Collections.Projects = Backbone.Collection.extend({
     return Commitwith.OriginalProjects.toJSON();
   },
 
-  byLanguage: function(language) {
+  filter: function(filterName, selection) {
     var filteredProjects = Commitwith.OriginalProjects.select(function(project) {
-      return project.hasLanguage(language);
+      return project["has_" + filterName](selection);
     });
     return filteredProjects;
-  },
-
-  bySkill: function(skill) {
-    var filteredProjects = Commitwith.OriginalProjects.select(function(project) {
-      return project.hasSkill(skill);
-    });
-    return filteredProjects;
-  },
-
-  byCategory: function(category) {
-    var filteredProjects = Commitwith.OriginalProjects.select(function(project) {
-      return project.hasCategory(category);
-    });
-    return filteredProjects;
-  }
+  }  
 });
