@@ -14,6 +14,7 @@ Commitwith.Views.Errors = Backbone.View.extend({
   render: function() {
     this.$el.html(this.template());
     this.$('#error-message').html(this.message);
+    return this;
   },
 
   removeAlert: function() {
