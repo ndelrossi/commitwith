@@ -2,5 +2,5 @@
   <button id="alert-close" type="button" class="close">
     <span aria-hidden="true">&times;</span>
   </button>
-  <span id="error-message"></span
+  <span><%= @message %></span
 </div>

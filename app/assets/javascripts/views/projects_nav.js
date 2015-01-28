@@ -10,6 +10,7 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
   render: function() {
     this.$el.html(this.template());
     this.afterRender();
+    return this;
   },
 
   afterRender: function() {
@@ -33,8 +34,8 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
   },
 
   displayError: function() {
-    this.errorView = new Commitwith.Views.Errors({message: "Repo not found."});
-    this.errorView.render();
+    errorView = new Commitwith.Views.Errors({message: "Repo not found."});
+    $('#errors-container').append(errorView.render().el);
   },
 
   checkRepoURL: function() {
