@@ -5,7 +5,7 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
     'click #find-repo': 'checkRepoURL',
     'click #button-filter-projects': 'openFilters',
     'click #button-reset-projects': 'resetProjectsList',
-    'submit #form-search': 'searchProjects',
+    'keyup #input-search': 'searchProjects',
     'click #button-search': 'searchProjects'
   },
 
