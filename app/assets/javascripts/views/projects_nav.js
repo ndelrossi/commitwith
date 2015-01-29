@@ -4,7 +4,9 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
   events: {
     'click #find-repo': 'checkRepoURL',
     'click #button-filter-projects': 'openFilters',
-    'click #button-reset-projects': 'resetProjectsList'
+    'click #button-reset-projects': 'resetProjectsList',
+    'submit #form-search': 'searchProjects',
+    'click #button-search': 'searchProjects'
   },
 
   render: function() {
@@ -17,6 +19,10 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
     this.$(".dropdown-menu #repo-name, .dropdown-menu #repo-owner").click(function(e) {
       return e.stopPropagation();
     });
+  },
+
+  searchProjects: function() {
+    this.collection.reset(this.collection.filter('any', this.$('#input-search').val()));
   },
 
   openProjectBuilder: function(repo) {

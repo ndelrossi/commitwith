@@ -3,8 +3,6 @@ Commitwith.Collections.Projects = Backbone.Collection.extend({
   model: Commitwith.Models.Project,
 
 
-  // FILTERS
-
   all: function() {
     return Commitwith.OriginalProjects.toJSON();
   },
