@@ -29,7 +29,6 @@
             <h4>Skill Level</h4>
               <ul class="filter-list">
                 <li><a href="#" class="filter-skill">Beginner</a></li>
-                <li><a href="#" class="filter-skill">Intermediate</a></li>
                 <li><a href="#" class="filter-skill">Advanced</a></li>
               </ul>
           </div>
