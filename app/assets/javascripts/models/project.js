@@ -2,9 +2,8 @@ Commitwith.Models.Project = Backbone.Model.extend({
 
   initialize: function() {
     
-    var last_update = this.get("updated_at");
     this.set({
-      last_update: last_update.split("T")[0]
+      last_update: this.get("updated_at")
     });
   },
 
