@@ -9,7 +9,7 @@ Commitwith.Views.ShowProject = Backbone.View.extend({
 
   render: function() {
     this.$el.html(this.template({project: this.model}));
-    this.displaySkills();
+    this.afterRender();
     return this;
   },
 
@@ -19,7 +19,7 @@ Commitwith.Views.ShowProject = Backbone.View.extend({
     return false;
   },
 
-  displaySkills: function() {
+  afterRender: function() {
     this.$(".skill").html(function() {
       return $(this).html().replace("," , "<br>");
     });

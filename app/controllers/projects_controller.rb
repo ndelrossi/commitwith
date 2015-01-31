@@ -24,7 +24,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.permit(:title, :author, :category, :skill)
+    params.permit(:title, :author, :description, :languages, :size, :open_issues, :category, :skill)
   end
 
   def projects

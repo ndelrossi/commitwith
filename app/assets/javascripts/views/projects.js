@@ -9,12 +9,13 @@ Commitwith.Views.Projects = Backbone.View.extend({
 
   render: function() {
     this.$el.html(this.template({currentSize: this.collection.length, totalSize: Commitwith.OriginalProjects.length}));
-    this.collection.forEach(this.renderProject);
+
+    var self = this;
+    this.collection.forEach(function (project) {
+      var view = new Commitwith.Views.ShowProject({model: project});
+      self.$('.projects-table-body').append(view.render().el);
+    });
+
     return this;
   },
-
-  renderProject: function(project) {
-    var view = new Commitwith.Views.ShowProject({model: project});
-    $('.projects-table-body').append(view.render().el);
-  }
 });

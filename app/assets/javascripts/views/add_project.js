@@ -20,6 +20,10 @@ Commitwith.Views.AddProject = Backbone.View.extend({
     this.collection.create({
       title: this.repo.get('name'),
       author: this.repo.get('owner').login,
+      description: this.repo.get('description'),
+      languages: this.repo.get("language"),
+      size: this.repo.get("size"),
+      open_issues: this.repo.get("open_issues_count"),
       category: this.$( "#select-category" ).val(),
       skill: this.getSkill()
     });
