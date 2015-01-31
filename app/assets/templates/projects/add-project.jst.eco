@@ -31,9 +31,6 @@
               <label><input type="checkbox" class="checkbox-skill" value="Beginner" checked>Beginner</label>
             </div>
             <div class="checkbox">
-              <label><input type="checkbox" class="checkbox-skill" value="Intermediate" checked>Intermediate</label>
-            </div>
-            <div class="checkbox">
               <label><input type="checkbox" class="checkbox-skill" value="Advanced" checked>Advanced</label>
             </div>
           </div>
