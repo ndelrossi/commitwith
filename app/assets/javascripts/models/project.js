@@ -1,7 +1,7 @@
 Commitwith.Models.Project = Backbone.Model.extend({
 
   has_language: function(language) {
-    return this.get('language') === language;
+    return this.get('languages') === language;
   },
 
   has_skill: function(skill) {
@@ -17,7 +17,7 @@ Commitwith.Models.Project = Backbone.Model.extend({
     var regex = new RegExp(search.toLowerCase(), 'g');
     var searchText = [ this.get('title'),
                        this.get('description'),
-                       this.get('language'),
+                       this.get('languages'),
                        this.get('category'),
                        this.get('skill'),
                        this.get('author') ].join().toLowerCase();

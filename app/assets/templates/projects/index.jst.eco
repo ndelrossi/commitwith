@@ -4,8 +4,8 @@
   <thead>
     <tr>
       <th>Project</th>
-      <th>Category</th>
-      <th>Language</th>
+      <th>Categories</th>
+      <th>Languages</th>
       <th>Size(kb)</th>
       <th>Open<br>Issues</th>
       <th>Skill<br>Level</th>
