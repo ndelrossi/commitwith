@@ -3,12 +3,16 @@ Commitwith.Views.ShowProject = Backbone.View.extend({
   tagName: 'tr',
   className: 'project',
 
+  initialize: function() {
+    this.last_update = moment(this.model.get('last_update')).fromNow(true);
+  },
+
   events: {
     'click .destroy-project': 'destroyProject'
   },
 
   render: function() {
-    this.$el.html(this.template({project: this.model}));
+    this.$el.html(this.template({project: this.model, updated: this.last_update}));
     this.afterRender();
     return this;
   },

@@ -24,8 +24,9 @@ Commitwith.Views.AddProject = Backbone.View.extend({
       languages: this.repo.get("language"),
       size: this.repo.get("size"),
       open_issues: this.repo.get("open_issues_count"),
-      category: this.$( "#select-category" ).val(),
-      skill: this.getSkill()
+      category: this.$("#select-category").val(),
+      skill: this.getSkill(),
+      last_update: this.repo.get("updated_at")
     });
     this.remove();
   },

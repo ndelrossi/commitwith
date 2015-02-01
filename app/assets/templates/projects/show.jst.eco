@@ -4,4 +4,4 @@
 <td><%= @project.get("size") %></td>
 <td><%= @project.get("open_issues") %></td>
 <td class="skill"><%= @project.get("skill") %></td>
-<td class="last-update"><%= @project.get("last_update") %></td>
+<td class="last-update"><%= @updated %></td>

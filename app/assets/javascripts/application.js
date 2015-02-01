@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require lodash
+//= require moment
 //= require backbone
 //= require commitwith
 //= require_tree ../templates

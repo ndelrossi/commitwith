@@ -1,12 +1,5 @@
 Commitwith.Models.Project = Backbone.Model.extend({
 
-  initialize: function() {
-    
-    this.set({
-      last_update: this.get("updated_at")
-    });
-  },
-
   has_language: function(language) {
     return this.get('language') === language;
   },
