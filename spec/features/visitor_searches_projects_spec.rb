@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 feature "visitor searches projects" do
-  let!(:project1) { create(:project, title: "rails", author: "rails", category: "Web", skill: "Beginner") }
-  let!(:project2) { create(:project, title: "glide", author: "bumptech", category: "Android", skill: "Advanced") }
+  let!(:project1) { create(:rails) }
+  let!(:project2) { create(:glide) }
 
   before do
     visit root_path
