@@ -8,8 +8,6 @@ set :deploy_to, '/home/deploy/commitwith'
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
-after "deploy:symlink", "deploy:update_crontab"
-
 namespace :deploy do
 
   desc "Update the crontab file"
@@ -31,4 +29,5 @@ namespace :deploy do
 
   after :publishing, 'deploy:restart'
   after :finishing, 'deploy:cleanup'
+  after "deploy:symlink", "deploy:update_crontab"
 end
