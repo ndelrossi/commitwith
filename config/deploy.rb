@@ -8,7 +8,14 @@ set :deploy_to, '/home/deploy/commitwith'
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
+after "deploy:symlink", "deploy:update_crontab"
+
 namespace :deploy do
+
+  desc "Update the crontab file"
+  task :update_crontab, :roles => :db do
+    run "cd #{release_path} && whenever --update-crontab #{application}"
+  end
 
   desc "Symlink shared config files"
   task :symlink_config_files do
