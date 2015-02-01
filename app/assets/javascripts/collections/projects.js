@@ -8,9 +8,10 @@ Commitwith.Collections.Projects = Backbone.Collection.extend({
   },
 
   has_project: function(title) {
-    return exists = this.some(function(project) {
+    var exists = this.some(function(project) {
       return project.has_title(title);
     });
+    return exists;
   },
 
   filter: function(filterName, selection) {

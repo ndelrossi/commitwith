@@ -7,10 +7,10 @@ feature "visitor filters projects" do
   
   before do
     visit root_path
+    click_button "Filter"
   end
 
   scenario "visitor filters projects by language", js: true do
-    click_button "Filter"
     click_link "Ruby"
 
     expect(page).to have_content("rails")
@@ -18,7 +18,6 @@ feature "visitor filters projects" do
   end
 
   scenario "visitor filters projects by category", js: true do
-    click_button "Filter"
     click_link "Android"
 
     expect(page).to have_content("glide")
@@ -26,7 +25,6 @@ feature "visitor filters projects" do
   end
 
   scenario "visitor filters projects by skill level", js: true do
-    click_button "Filter"
     click_link "Advanced"
 
     expect(page).to have_content("glide")
@@ -34,7 +32,6 @@ feature "visitor filters projects" do
   end
 
   scenario "visitor filters list and then resets the list", js: true do
-    click_button "Filter"
     click_link "Android"
     expect(page).to have_content("glide")
     expect(page).not_to have_content("rails")
