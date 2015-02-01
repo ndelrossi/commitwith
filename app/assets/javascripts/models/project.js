@@ -1,5 +1,9 @@
 Commitwith.Models.Project = Backbone.Model.extend({
 
+  has_title: function(title) {
+    return this.get('title') === title;
+  },
+
   has_language: function(language) {
     return this.get('languages') === language;
   },

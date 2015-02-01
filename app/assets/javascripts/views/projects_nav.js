@@ -51,6 +51,10 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
     var self = this;
     repo.fetch({
       success: function() {
+        if (self.collection.has_project(repo.get('name')) == true) {
+          self.displayError("Repo already exists");
+          return;
+        }
         if (repo.get('private') == false) {
           self.openProjectBuilder(repo);
         } else {
