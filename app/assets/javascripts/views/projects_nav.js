@@ -39,8 +39,8 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
     this.collection.reset(this.collection.all());
   },
 
-  displayError: function() {
-    errorView = new Commitwith.Views.Errors({message: "Repo not found."});
+  displayError: function(messageText) {
+    errorView = new Commitwith.Views.Errors({message: messageText});
     $('#errors-container').append(errorView.render().el);
   },
 
@@ -51,10 +51,14 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
     var self = this;
     repo.fetch({
       success: function() {
-        self.openProjectBuilder(repo);
+        if (repo.get('private') == false) {
+          self.openProjectBuilder(repo);
+        } else {
+          self.displayError("Repo has to be public");
+        }
       },
       error: function() {
-        self.displayError();
+        self.displayError("Repo not found or repo is private");
       },
     });
   }
