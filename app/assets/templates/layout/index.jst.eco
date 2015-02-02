@@ -1,24 +1,18 @@
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand visible-xs">Commitwith</span>
-    </div>
-    <div class="collapse navbar-collapse">
-      <span class="navbar-brand-basic hidden-xs">Commitwith - connecting developers with open-source projects</span>
-    </div>
+  <div class="navbar-header">
+    <span class="navbar-brand-basic visible-xs">Commitwith</span>
+  </div>
+  <div class="collapse navbar-collapse">
+    <span class="navbar-brand-basic hidden-xs">Commitwith - connecting developers with open-source projects</span>
+  </div>
 </nav>
 
 <section class="main-section">
-    <div class="col-xs-12" id="errors-container"></div>
-    <div class="col-sm-10 col-xs-12 col-sm-offset-1">
-      <div class="projects-nav"></div>
-      <div class="projects-list"></div>
-    </div>
+  <div class="col-xs-12" id="errors-container"></div>
+  <div class="col-sm-10 col-xs-12 col-sm-offset-1">
+    <div class="projects-nav"></div>
+    <div class="projects-list"></div>
+  </div>
 </section>
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
