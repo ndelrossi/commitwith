@@ -36,6 +36,8 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
   },
 
   resetProjectsList: function() {
+    this.collection.sortDirection = -1;
+    this.collection.sortProjects('created_at');
     this.collection.reset(this.collection.all());
   },
 

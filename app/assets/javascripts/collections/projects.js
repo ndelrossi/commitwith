@@ -6,7 +6,7 @@ Commitwith.Collections.Projects = Backbone.Collection.extend({
   // http://www.benknowscode.com/2013/01/creating-sortable-tables-with-backbone_8752.html
 
   sortAttribute: "created_at",
-  sortDirection: 1,
+  sortDirection: -1,
  
   sortProjects: function (attr) {
     this.sortAttribute = attr;
