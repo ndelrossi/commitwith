@@ -1,5 +1,9 @@
 Commitwith.Models.Project = Backbone.Model.extend({
 
+  defaults: {
+    created_at: moment().toString()
+  },
+
   has_title: function(title) {
     return this.get('title') === title;
   },
