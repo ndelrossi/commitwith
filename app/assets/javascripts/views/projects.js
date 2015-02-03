@@ -1,6 +1,10 @@
 Commitwith.Views.Projects = Backbone.View.extend({
   template: JST['projects/index'],
 
+  events: {
+    'click #sort-open_issues,#sort-size': 'sortProjects'
+  },
+
   initialize: function() {
     this.listenTo(this.collection, 'add', this.render);
     this.listenTo(this.collection, 'reset', this.render);
@@ -17,5 +21,12 @@ Commitwith.Views.Projects = Backbone.View.extend({
     });
 
     return this;
+  },
+
+  sortProjects: function(e) {
+    var sortAttr = $(e.target).attr('id').split("-")[1];
+    this.collection.sortDirection *= -1;
+    this.collection.sortProjects(sortAttr);
+    this.render();
   },
 });
