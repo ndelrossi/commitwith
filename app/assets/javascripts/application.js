@@ -15,6 +15,7 @@
 //= require twitter/bootstrap
 //= require lodash
 //= require moment
+//= require bootstrap-multiselect
 //= require backbone
 //= require commitwith
 //= require_tree ../templates

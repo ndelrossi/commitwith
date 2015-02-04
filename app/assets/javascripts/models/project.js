@@ -18,7 +18,8 @@ Commitwith.Models.Project = Backbone.Model.extend({
   },
 
   has_category: function(category) {
-    return this.get('category') === category;
+    var regex = new RegExp(category, 'g');
+    return (this.get('category') || " ").match(regex);
   },
 
   has_any: function(search) {
