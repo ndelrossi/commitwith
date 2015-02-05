@@ -9,7 +9,7 @@ Commitwith.Models.Project = Backbone.Model.extend({
   },
 
   has_language: function(language) {
-    var regex = new RegExp(language, 'g');
+    var regex = new RegExp("(^|,)" + language + "($|,)", 'g');
     return (this.get('languages') || " ").match(regex);
   },
 
