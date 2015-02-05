@@ -24,7 +24,7 @@ Commitwith.Models.Project = Backbone.Model.extend({
 
   has_any: function(search) {
     var regex = new RegExp(search.toLowerCase(), 'g');
-    var searchText = [ this.get('title'),
+    var searchText = [ this.get('name'),
                        this.get('description'),
                        this.get('languages'),
                        this.get('categories'),
