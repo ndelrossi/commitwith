@@ -12,7 +12,16 @@ Commitwith.Views.AddProject = Backbone.View.extend({
   render: function() {
     this.$el.html(this.template({repo: this.repo}));
     this.$('#add-project-modal').modal('show');
-    this.setUpMultiSelects();
+    this.setUpMultiSelectsFor('#multi-select-category');
+    this.setUpMultiSelectsFor('#multi-select-languages');
+
+    var options = [];
+    this.repo.get('languages').split(',').forEach(function(lang) {
+      options.push({label: lang, title: lang, value: lang, selected: true});
+    });
+    this.$('#multi-select-languages').multiselect('dataprovider', options);
+
+
     return this;
   },
 
@@ -22,10 +31,10 @@ Commitwith.Views.AddProject = Backbone.View.extend({
       title: this.repo.get('name'),
       author: this.repo.get('owner').login,
       description: this.repo.get('description'),
-      languages: this.repo.get("language"),
+      languages: (this.$("#multi-select-languages").val() || " ").toString(),
       size: this.repo.get("size"),
       open_issues: this.repo.get("open_issues_count"),
-      category: this.$("#multi-select-category").val().toString(),
+      category: (this.$("#multi-select-category").val() || " ").toString(),
       skill: this.getSkill(),
       last_update: this.repo.get("updated_at")
     };
@@ -42,21 +51,21 @@ Commitwith.Views.AddProject = Backbone.View.extend({
     return skill.toString();
   },
 
-  setUpMultiSelects: function() {
+  setUpMultiSelectsFor: function(selector) {
     var self = this;
-    this.$('#multi-select-category').multiselect({
+    this.$(selector).multiselect({
       nonSelectedText: 'Select up to 3 categories',
       buttonWidth: '100%',
       onChange: function(option, checked) {
-        var selectedOptions = self.$('#multi-select-category option:selected');
+        var selectedOptions = self.$(selector + ' option:selected');
  
         if (selectedOptions.length >= 3) {
           // Disable all other checkboxes.
-          var nonSelectedOptions = self.$('#multi-select-category option').filter(function() {
+          var nonSelectedOptions = self.$(selector + ' option').filter(function() {
             return !$(this).is(':selected');
           });
  
-          var dropdown = self.$('#milti-select').siblings('.multiselect-container');
+          var dropdown = self.$(selector).siblings('.multiselect-container');
           nonSelectedOptions.each(function() {
             var input = self.$('input[value="' + $(this).val() + '"]');
             input.prop('disabled', true);
@@ -65,8 +74,8 @@ Commitwith.Views.AddProject = Backbone.View.extend({
         }
         else {
           // Enable all checkboxes.
-          var dropdown = self.$('#multi-select-category').siblings('.multiselect-container');
-          $('#multi-select-category option').each(function() {
+          var dropdown = self.$(selector).siblings('.multiselect-container');
+          $(selector + ' option').each(function() {
             var input = self.$('input[value="' + $(this).val() + '"]');
             input.prop('disabled', false);
             input.parent('li').addClass('disabled');

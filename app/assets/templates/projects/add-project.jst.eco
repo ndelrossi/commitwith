@@ -27,6 +27,11 @@
             </select>
           </div>
           <div class="form-group">
+            <label for="multi-select-languages" class="control-label">Languages:</label>
+            <select id="multi-select-languages" multiple="multiple" class="form-control">
+            </select>
+          </div>
+          <div class="form-group">
             <label class="control-label">Skill level:</label>
             <div class="checkbox">
               <label><input type="checkbox" class="checkbox-skill" value="Beginner" checked>Beginner</label>
