@@ -8,7 +8,7 @@ feature "Visitor visits home page" do
   end
 
   scenario "visitor sees project listed", js:true do
-    create(:project, title: "rails", author: "rails")
+    create(:project, name: "rails", author: "rails")
 
     visit root_path
 
