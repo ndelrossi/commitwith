@@ -44,7 +44,7 @@ Commitwith.Views.AddProject = Backbone.View.extend({
 
   setUpMultiSelects: function() {
     this.$('#multi-select-category').multiselect({
-      nonSelectedText: 'Select up to 3 categories',
+      nonSelectedText: 'Select categories',
       buttonWidth: '100%'
     });
     this.$('#multi-select-languages').multiselect({
@@ -53,8 +53,9 @@ Commitwith.Views.AddProject = Backbone.View.extend({
     });
 
     var languageOptions = [];
+    var primaryLang = this.repo.get('language');
     this.repo.get('languages').split(',').forEach(function(lang) {
-      languageOptions.push({label: lang, value: lang, selected: true});
+      languageOptions.push({label: lang, value: lang, selected: (lang === primaryLang ? true : false)});
     });
     this.$('#multi-select-languages').multiselect('dataprovider', languageOptions);
   }

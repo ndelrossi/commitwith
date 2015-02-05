@@ -16,7 +16,7 @@
             <textarea class="form-control" id="modal-repo-description"><%= @repo.get('description') %></textarea>
           </div>
           <div class="form-group">
-            <label for="multi-select-category" class="control-label">Categories:</label>
+            <label for="multi-select-category" class="control-label">Categories (max of 3):</label>
             <select id="multi-select-category" multiple="multiple" class="form-control">
               <option value="Web">Web</option>
               <option value="iOS">iOS</option>
@@ -27,7 +27,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="multi-select-languages" class="control-label">Languages:</label>
+            <label for="multi-select-languages" class="control-label">Languages (max of 3):</label>
             <select id="multi-select-languages" multiple="multiple" class="form-control">
             </select>
           </div>
