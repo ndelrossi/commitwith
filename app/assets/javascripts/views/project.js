@@ -24,10 +24,10 @@ Commitwith.Views.ShowProject = Backbone.View.extend({
   },
 
   afterRender: function() {
-    this.$(".skill").html(function() {
+    this.$(".beginner").html(function() {
       return $(this).html().replace("," , "<br>");
     });
-    this.$(".category").html(function() {
+    this.$(".categories").html(function() {
       return $(this).html().replace(/,/g , "<br>");
     });
     this.$(".languages").html(function() {

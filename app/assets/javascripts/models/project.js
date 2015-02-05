@@ -4,8 +4,8 @@ Commitwith.Models.Project = Backbone.Model.extend({
     created_at: moment().toString()
   },
 
-  has_title: function(title) {
-    return this.get('title') === title;
+  has_name: function(name) {
+    return this.get('name') === name;
   },
 
   has_language: function(language) {
@@ -13,13 +13,13 @@ Commitwith.Models.Project = Backbone.Model.extend({
     return (this.get('languages') || " ").match(regex);
   },
 
-  has_skill: function(skill) {
-    return this.get('skill') === "Yes";
+  has_beginner: function() {
+    return this.get('beginner') === "Yes";
   },
 
   has_category: function(category) {
     var regex = new RegExp(category, 'g');
-    return (this.get('category') || " ").match(regex);
+    return (this.get('categories') || " ").match(regex);
   },
 
   has_any: function(search) {
@@ -27,8 +27,8 @@ Commitwith.Models.Project = Backbone.Model.extend({
     var searchText = [ this.get('title'),
                        this.get('description'),
                        this.get('languages'),
-                       this.get('category'),
-                       this.get('skill'),
+                       this.get('categories'),
+                       this.get('beginner'),
                        this.get('author') ].join().toLowerCase();
 
     return searchText.match(regex);

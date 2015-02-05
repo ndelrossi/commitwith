@@ -32,9 +32,9 @@ Commitwith.Collections.Projects = Backbone.Collection.extend({
     return Commitwith.OriginalProjects.toJSON();
   },
 
-  has_project: function(title) {
+  has_project: function(name) {
     var exists = this.some(function(project) {
-      return project.has_title(title);
+      return project.has_name(name);
     });
     return exists;
   },

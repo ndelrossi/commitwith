@@ -19,14 +19,14 @@ Commitwith.Views.AddProject = Backbone.View.extend({
   addProject: function() {
     $('.modal-backdrop').remove();
     var new_model = {
-      title: this.repo.get('name'),
+      name: this.repo.get('name'),
       author: this.repo.get('owner').login,
       description: this.repo.get('description'),
       languages: (this.$("#multi-select-languages").val() || " ").toString(),
       size: this.repo.get("size"),
       open_issues: this.repo.get("open_issues_count"),
-      category: (this.$("#multi-select-category").val() || " ").toString(),
-      skill: $(".checkbox-beginner:checked").val(),
+      categories: (this.$("#multi-select-categories").val() || " ").toString(),
+      beginner: $(".checkbox-beginner:checked").val(),
       last_update: this.repo.get("updated_at")
     };
     this.collection.create(new_model);
@@ -43,7 +43,7 @@ Commitwith.Views.AddProject = Backbone.View.extend({
   },
 
   setUpMultiSelects: function() {
-    this.$('#multi-select-category').multiselect({
+    this.$('#multi-select-categories').multiselect({
       nonSelectedText: 'Select categories',
       buttonWidth: '100%'
     });

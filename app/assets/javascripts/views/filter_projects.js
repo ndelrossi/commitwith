@@ -2,7 +2,7 @@ Commitwith.Views.FilterProjects = Backbone.View.extend({
   template: JST['projects/filter-projects'],
 
   events: {
-    'click .filter-language,.filter-category,.filter-skill': 'updateList'
+    'click .filter-language,.filter-category,.filter-beginner': 'updateList'
   },
 
   render: function() {
