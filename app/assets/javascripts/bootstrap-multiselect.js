@@ -198,7 +198,33 @@
              * @param {Boolean} checked
              */
             onChange : function(option, checked) {
-
+		// Added this code to prevent more than 3 options selected.
+		// This should be refactored to an option
+		var select = '#' + this.$select.attr('id');
+		var selectedOptions = $(select + ' option:selected');
+ 
+                if (selectedOptions.length >= 3) {
+                    // Disable all other checkboxes.
+                    var nonSelectedOptions = $(select + ' option').filter(function() {
+                        return !$(this).is(':selected');
+                    });
+ 
+                    var dropdown = $(select).siblings('.multiselect-container');
+                    nonSelectedOptions.each(function() {
+                        var input = $('input[value="' + $(this).val() + '"]');
+                        input.prop('disabled', true);
+                        input.parent('li').addClass('disabled');
+                    });
+                }
+                else {
+                    // Enable all checkboxes.
+                    var dropdown = $(select).siblings('.multiselect-container');
+                    $(select + ' option').each(function() {
+                        var input = $('input[value="' + $(this).val() + '"]');
+                        input.prop('disabled', false);
+                        input.parent('li').addClass('disabled');
+                    });
+                }
             },
             /**
              * Triggered when the dropdown is shown.

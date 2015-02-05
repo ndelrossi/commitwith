@@ -30,5 +30,8 @@ Commitwith.Views.ShowProject = Backbone.View.extend({
     this.$(".category").html(function() {
       return $(this).html().replace(/,/g , "<br>");
     });
+    this.$(".languages").html(function() {
+      return $(this).html().replace(/,/g , "<br>");
+    });
   }
 });

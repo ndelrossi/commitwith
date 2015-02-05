@@ -12,16 +12,7 @@ Commitwith.Views.AddProject = Backbone.View.extend({
   render: function() {
     this.$el.html(this.template({repo: this.repo}));
     this.$('#add-project-modal').modal('show');
-    this.setUpMultiSelectsFor('#multi-select-category');
-    this.setUpMultiSelectsFor('#multi-select-languages');
-
-    var options = [];
-    this.repo.get('languages').split(',').forEach(function(lang) {
-      options.push({label: lang, title: lang, value: lang, selected: true});
-    });
-    this.$('#multi-select-languages').multiselect('dataprovider', options);
-
-
+    this.setUpMultiSelects();
     return this;
   },
 
@@ -51,37 +42,20 @@ Commitwith.Views.AddProject = Backbone.View.extend({
     return skill.toString();
   },
 
-  setUpMultiSelectsFor: function(selector) {
-    var self = this;
-    this.$(selector).multiselect({
+  setUpMultiSelects: function() {
+    this.$('#multi-select-category').multiselect({
       nonSelectedText: 'Select up to 3 categories',
-      buttonWidth: '100%',
-      onChange: function(option, checked) {
-        var selectedOptions = self.$(selector + ' option:selected');
- 
-        if (selectedOptions.length >= 3) {
-          // Disable all other checkboxes.
-          var nonSelectedOptions = self.$(selector + ' option').filter(function() {
-            return !$(this).is(':selected');
-          });
- 
-          var dropdown = self.$(selector).siblings('.multiselect-container');
-          nonSelectedOptions.each(function() {
-            var input = self.$('input[value="' + $(this).val() + '"]');
-            input.prop('disabled', true);
-            input.parent('li').addClass('disabled');
-          });
-        }
-        else {
-          // Enable all checkboxes.
-          var dropdown = self.$(selector).siblings('.multiselect-container');
-          $(selector + ' option').each(function() {
-            var input = self.$('input[value="' + $(this).val() + '"]');
-            input.prop('disabled', false);
-            input.parent('li').addClass('disabled');
-          });
-        }
-      }
+      buttonWidth: '100%'
     });
+    this.$('#multi-select-languages').multiselect({
+      nonSelectedText: 'Select languages',
+      buttonWidth: '100%'
+    });
+
+    var languageOptions = [];
+    this.repo.get('languages').split(',').forEach(function(lang) {
+      languageOptions.push({label: lang, title: lang, value: lang, selected: true});
+    });
+    this.$('#multi-select-languages').multiselect('dataprovider', languageOptions);
   }
 });

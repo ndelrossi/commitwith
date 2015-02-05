@@ -1,6 +1,6 @@
 <td class="col-md-5 col-xs-3"><h4 class="project-name"><%= @project.get("title") %></h4><%= @project.get("description") %></td>
 <td class="category"><%= @project.get("category") %></td>
-<td><%= @project.get("languages") %></td>
+<td class="languages"><%= @project.get("languages") %></td>
 <td><%= @project.get("size") %></td>
 <td><%= @project.get("open_issues") %></td>
 <td class="skill"><%= @project.get("skill") %></td>
