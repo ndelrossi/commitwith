@@ -28,8 +28,7 @@
           <div class="col-xs-3">
             <h4>Skill Level</h4>
               <ul class="filter-list">
-                <li><a href="#" class="filter-skill">Beginner</a></li>
-                <li><a href="#" class="filter-skill">Advanced</a></li>
+                <li><a href="#" class="filter-skill">Beginner friendly</a></li>
               </ul>
           </div>
         </div>

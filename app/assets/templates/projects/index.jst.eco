@@ -8,7 +8,7 @@
       <th>Language</th>
       <th><a href="#" id="sort-size">Size(kb)</a></th>
       <th><a href="#" id="sort-open_issues">Open<br>Issues</a></th>
-      <th>Skill<br>Level</th>
+      <th>Beginner<br>Friendly?</th>
       <th>Last<br>Update</th>
     </tr>
   <thead>

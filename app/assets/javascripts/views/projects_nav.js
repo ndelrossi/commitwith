@@ -47,8 +47,8 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
   },
 
   checkRepoURL: function() {
-    var name = this.$('#repo-name').val().toLowerCase();
-    var owner = this.$('#repo-owner').val().toLowerCase();
+    var name = this.$('#repo-name').val().toLowerCase().trim();
+    var owner = this.$('#repo-owner').val().toLowerCase().trim();
     var repo = new Commitwith.Models.Repo({id: "/" + owner + "/" + name});
     var self = this;
     repo.fetch({

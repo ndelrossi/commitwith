@@ -26,7 +26,7 @@ Commitwith.Views.AddProject = Backbone.View.extend({
       size: this.repo.get("size"),
       open_issues: this.repo.get("open_issues_count"),
       category: (this.$("#multi-select-category").val() || " ").toString(),
-      skill: this.getSkill(),
+      skill: $(".checkbox-beginner:checked").val(),
       last_update: this.repo.get("updated_at")
     };
     this.collection.create(new_model);
@@ -54,7 +54,7 @@ Commitwith.Views.AddProject = Backbone.View.extend({
 
     var languageOptions = [];
     this.repo.get('languages').split(',').forEach(function(lang) {
-      languageOptions.push({label: lang, title: lang, value: lang, selected: true});
+      languageOptions.push({label: lang, value: lang, selected: true});
     });
     this.$('#multi-select-languages').multiselect('dataprovider', languageOptions);
   }
