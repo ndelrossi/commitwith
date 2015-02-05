@@ -1,15 +1,15 @@
 FactoryGirl.define do
   factory :project do
 
-    factory :commitwith do
-      title "commitwith"
+    factory :foo do
+      title "foo"
       author "ndelrossi"
-      description "A website that helps people find open source projects"
+      description "A fake website for testing"
       category "Web"
       languages "Ruby"
       size 400
       open_issues 0
-      skill "Beginner"
+      skill "Yes"
     end
 
     factory :rails do
@@ -20,7 +20,7 @@ FactoryGirl.define do
       languages "Ruby"
       size 367155
       open_issues 767
-      skill "Beginner"
+      skill ""
     end
 
     factory :glide do
@@ -31,7 +31,7 @@ FactoryGirl.define do
       languages "Java"
       size 21655
       open_issues 50
-      skill "Advanced"
+      skill "Yes"
     end
   end
 end

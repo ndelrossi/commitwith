@@ -25,7 +25,7 @@ feature "visitor filters projects" do
   end
 
   scenario "visitor filters projects by skill level", js: true do
-    click_link "Advanced"
+    click_link "Beginner friendly"
 
     expect(page).to have_content("glide")
     expect(page).not_to have_content("rails") 

@@ -22,13 +22,6 @@ feature "visitor searches projects" do
     expect(page).not_to have_content("rails") 
   end
 
-  scenario "visitor searches for skill of project", js: true do
-    fill_in "input-search", with: "beginner"
-
-    expect(page).to have_content("rails")
-    expect(page).not_to have_content("glide") 
-  end
-
   scenario "visitor searches for text in description of project", js: true do
     fill_in "input-search", with: "image loading"
 
