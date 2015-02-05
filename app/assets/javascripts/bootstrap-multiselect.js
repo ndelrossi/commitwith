@@ -141,12 +141,15 @@
                 if (options.length === 0) {
                     return this.nonSelectedText + ' <b class="caret"></b>';
                 }
+		// Always show selected items.
+		/*
                 else if (options.length == $('option', $(select)).length) {
                     return this.allSelectedText + ' <b class="caret"></b>';
                 }
                 else if (options.length > this.numberDisplayed) {
                     return options.length + ' ' + this.nSelectedText + ' <b class="caret"></b>';
                 }
+		*/
                 else {
                     var selected = '';
                     options.each(function() {
