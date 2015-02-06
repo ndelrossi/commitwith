@@ -31,6 +31,13 @@ feature "Visitor adds project" do
     expect(page).to have_content("commitwith", count: 1)
   end
 
+  scenario "vistor finds repo and sees primary language pre-loaded", js: true do
+    add_project("commitwith", "ndelrossi")
+
+    expect(page).to have_content("Ruby")
+  end
+  
+
   def add_project(name, author)
     click_button "Add Project"
     fill_in "repo-name", with: name
