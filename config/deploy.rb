@@ -1,6 +1,9 @@
 # config valid only for Capistrano 3.1
 lock '3.1.0'
 
+set :whenever_command, "bundle exec whenever"
+require "whenever/capistrano"
+
 set :application, 'commitwith'
 set :repo_url, 'git@github.com:ndelrossi/commitwith.git'
 
