@@ -6,6 +6,8 @@ class Project < ActiveRecord::Base
       project.update_attributes(size:        response["size"],
                                 open_issues: response["open_issues_count"],
                                 last_update: response["updated_at"])
+      project.touch
     end
   end
+    oreate(:project, name: "rails", author: "rails")
 end
