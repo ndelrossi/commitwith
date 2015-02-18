@@ -9,5 +9,4 @@ class Project < ActiveRecord::Base
       project.touch
     end
   end
-    oreate(:project, name: "rails", author: "rails")
 end
