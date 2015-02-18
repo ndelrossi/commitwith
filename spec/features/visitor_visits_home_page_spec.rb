@@ -14,4 +14,13 @@ feature "Visitor visits home page" do
 
     expect(page).to have_content("rails")
   end
+
+  scenario "visitor sees a count for how many projects listed", js:true do
+    create(:project, name: "rails", author: "rails")
+    create(:project, name: "commitwith", author: "ndelrossi")
+
+    visit root_path
+
+    expect(page).to have_content("Listing 2 of 2 projects")
+  end
 end
