@@ -21,7 +21,8 @@ Commitwith.Views.AddProject = Backbone.View.extend({
     var new_model = {
       name: this.repo.get('name'),
       author: this.repo.get('owner').login,
-      description: this.repo.get('description'),
+      description: this.$('#modal-repo-description').val(),
+      needs: this.$('#modal-needs').val(),
       languages: (this.$("#multi-select-languages").val() || " ").toString(),
       size: this.repo.get("size"),
       open_issues: this.repo.get("open_issues_count"),
