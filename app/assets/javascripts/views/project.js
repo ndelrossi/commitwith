@@ -5,10 +5,12 @@ Commitwith.Views.ShowProject = Backbone.View.extend({
 
   initialize: function() {
     this.last_update = moment(this.model.get('last_update')).fromNow(true);
+    this.expandedShow = new Commitwith.Views.ShowExpanded();
+    this.expandedShowOpen = false;
   },
 
   events: {
-    'click .destroy-project': 'destroyProject'
+    'click': 'triggerExpandedView'
   },
 
   render: function() {
@@ -17,10 +19,14 @@ Commitwith.Views.ShowProject = Backbone.View.extend({
     return this;
   },
 
-  destroyProject: function() {
-    this.model.destroy();
-    this.remove();
-    return false;
+  triggerExpandedView: function() {
+    if(this.expandedShowOpen == false) {
+      this.$el.after(this.expandedShow.render().el);
+      this.expandedShowOpen = true;
+    } else {
+      this.expandedShow.remove();
+      this.expandedShowOpen = false;
+    }
   },
 
   afterRender: function() {
