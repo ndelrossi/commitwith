@@ -1,3 +1,3 @@
 <td colspan="10">
-  <p>testing expanded show</p>
+  <p><strong>Project needs: </strong><%= @project.get("needs") %></p>
 </td>

@@ -4,7 +4,7 @@ Commitwith.Views.ShowExpanded = Backbone.View.extend({
   className: 'project-expanded',
 
   render: function() {
-    this.$el.html(this.template());
+    this.$el.html(this.template({project: this.model}));
     return this;
   }
 });
