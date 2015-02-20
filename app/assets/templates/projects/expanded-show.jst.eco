@@ -1,4 +1,7 @@
 <td colspan="10">
+  <div class="col-xs-12">
+    <a href="https://github.com/<%= @project.get('author') %>/<%= @project.get('name') %>" target="_blank">Github page</a>
+  </div>
   <div class="col-sm-4 visible-sm visible-xs">
     <p><strong>Description: </strong><%= @project.get("description") %></p>
   </div>
