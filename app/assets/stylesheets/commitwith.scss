@@ -51,13 +51,15 @@ body {
 // Project
 
 .project-name {
-  padding: 0 0 5px 0;
-  margin: 0px;
+  display: block;
 }
 
 .project-expanded {
   td {
     border-top: none !important;
+  }
+  td>div {
+    padding-left: 0px;
   }
 }
 

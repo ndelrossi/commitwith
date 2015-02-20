@@ -6,10 +6,10 @@
       <th>Project</th>
       <th>Category</th>
       <th>Language</th>
-      <th><a href="#" id="sort-size">Size(kb)</a></th>
+      <th class="hidden-xs"><a href="#" id="sort-size">Size(kb)</a></th>
       <th><a href="#" id="sort-open_issues">Open<br>Issues</a></th>
-      <th>Beginner<br>Friendly?</th>
-      <th>Last<br>Update</th>
+      <th class="hidden-xs">Beginner<br>Friendly?</th>
+      <th class="hidden-xs">Last<br>Update</th>
     </tr>
   <thead>
   <tbody class="projects-table-body">

@@ -1,7 +1,10 @@
-<td class="col-md-5 col-xs-3"><h4 class="project-name"><%= @project.get("name") %></h4><%= @project.get("description") %></td>
+<td class="col-md-5 col-xs-3">
+  <span class="project-name"><strong><%= @project.get("name") %></strong></span>
+  <span class="hidden-sm hidden-xs"><%= @project.get("description") %></span>
+</td>
 <td class="categories"><%= @project.get("categories") %></td>
 <td class="languages"><%= @project.get("languages") %></td>
-<td><%= @project.get("size") %></td>
+<td class="hidden-xs"><%= @project.get("size") %></td>
 <td><%= @project.get("open_issues") %></td>
-<td class="beginner"><%= @project.get("beginner") %></td>
-<td class="last-update"><%= @updated %></td>
+<td class="beginner hidden-xs"><%= @project.get("beginner") %></td>
+<td class="last-update hidden-xs"><%= @updated %></td>
