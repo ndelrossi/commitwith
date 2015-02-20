@@ -5,7 +5,7 @@ Commitwith.Views.ShowProject = Backbone.View.extend({
 
   initialize: function() {
     this.last_update = moment(this.model.get('last_update')).fromNow(true);
-    this.expandedShow = new Commitwith.Views.ShowExpanded({model: this.model, updated: this.last_update});
+    this.expandedShow = new Commitwith.Views.ShowExpanded({model: this.model});
     this.expandedShowOpen = false;
   },
 

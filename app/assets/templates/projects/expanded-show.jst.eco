@@ -7,7 +7,7 @@
   </div>
   <div class="col-sm-4">
     <span class="visible-xs"><strong>Size: </strong><%= @project.get("size") %></span>
-    <span class="visible-xs"><strong>Beginner Friendly?: </strong><%= @project.get("beginner") %></span>
+    <span class="visible-xs"><strong>Beginner Friendly: </strong><%= @project.get("beginner") %></span>
     <span class="visible-xs"><strong>Last Update: </strong><%= @updated %></span>
   </div>
 </td>
