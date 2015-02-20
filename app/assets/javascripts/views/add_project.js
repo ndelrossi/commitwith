@@ -27,7 +27,7 @@ Commitwith.Views.AddProject = Backbone.View.extend({
       size: this.repo.get("size"),
       open_issues: this.repo.get("open_issues_count"),
       categories: (this.$("#multi-select-categories").val() || " ").toString(),
-      beginner: $(".checkbox-beginner:checked").val(),
+      beginner: this.$(".checkbox-beginner:checked").val() || "No",
       last_update: this.repo.get("updated_at")
     };
     this.collection.create(new_model);
