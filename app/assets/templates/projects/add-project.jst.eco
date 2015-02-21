@@ -12,6 +12,11 @@
             <input type="text" class="form-control" id="modal-repo-name" value="<%= @repo.get('name') %>" disabled>
           </div>
           <div class="form-group">
+            <label for="modal-email" class="control-label">Your Email (required):</label>
+            <input type="text" class="form-control" id="modal-email" aria-describedby="emailHelpBlock">
+            <span id="emailHelpBlock" class="help-block">Email is required to confirm listing.</span>
+          </div>
+          <div class="form-group">
             <label for="modal-repo-description" class="control-label">Description:</label>
             <textarea class="form-control" id="modal-repo-description"><%= @repo.get('description') %></textarea>
           </div>

@@ -20,6 +20,7 @@ Commitwith.Views.AddProject = Backbone.View.extend({
     $('.modal-backdrop').remove();
     var new_model = {
       name: this.repo.get('name'),
+      email: this.$('#modal-email').val(),
       author: this.repo.get('owner').login,
       description: this.$('#modal-repo-description').val(),
       needs: this.$('#modal-needs').val(),
