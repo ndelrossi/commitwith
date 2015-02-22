@@ -2,6 +2,8 @@ class Project < ActiveRecord::Base
 
   before_create { generate_token(:auth_token) }
 
+  scope :active, -> { where(active: true) }
+
   def send_activation
     ProjectMailer.project_control(self).deliver
   end

@@ -1,0 +1,9 @@
+<p>This is confirmation email for a project created on www.commitwith.com.</p>
+
+<p>The links below can be used to activate or delete your project.</p>
+
+<p>Please save this email. It will serve as the only method of removing your project.<p>
+
+<p>Click to ACTIVATE project: <%= link_to "ACTIVATE project", project_activate_url(@project.auth_token) %></p>
+
+<p>Click to DELETE project: <%= link_to "DELETE project", project_remove_url(@project.auth_token), method: :delete %></p>

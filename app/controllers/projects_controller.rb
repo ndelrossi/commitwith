@@ -1,23 +1,22 @@
 class ProjectsController < ApplicationController
   helper_method :projects, :project
   respond_to :json, only: [:index, :create, :update, :destroy]
-  respond_to :html, only: [:index, :show]
+  respond_to :html, only: [:index]
 
   def index
     respond_with projects
   end
 
-  def show
-    @project = Project.find_by_activation_token!(params[:id])
-    if @project.update_attribute(:active, true)
-      render :show
-    else
-      redirect_to root_url
+  def activate
+    if @project = Project.find_by_auth_token(params[:id])
+      @project.update_attribute(:active, true)
     end
+    redirect_to root_url
   end
 
   def create
     project = Project.create(project_params)
+    project.send_activation if project
     respond_with project
   end
 
@@ -27,7 +26,10 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    respond_with project.destroy
+    if @project = Project.find_by_auth_token(params[:id])
+      @project.destroy
+    end
+    redirect_to root_url
   end
 
   private
@@ -37,7 +39,7 @@ class ProjectsController < ApplicationController
   end
 
   def projects
-    @projects ||= Project.all
+    @projects ||= Project.active
   end
 
   def project
