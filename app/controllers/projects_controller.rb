@@ -1,10 +1,19 @@
 class ProjectsController < ApplicationController
   helper_method :projects, :project
   respond_to :json, only: [:index, :create, :update, :destroy]
-  respond_to :html, only: [:index]
+  respond_to :html, only: [:index, :show]
 
   def index
     respond_with projects
+  end
+
+  def show
+    @project = Project.find_by_activation_token!(params[:id])
+    if @project.update_attribute(:active, true)
+      render :show
+    else
+      redirect_to root_url
+    end
   end
 
   def create
