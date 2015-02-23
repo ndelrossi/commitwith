@@ -9,11 +9,11 @@ gem 'sass', '3.2'
 gem 'uglifier', '~> 2.6.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
-gem 'jbuilder', '~> 2.0'
 gem 'backbone-on-rails', '~> 1.1.2.0'
 gem 'lodash-rails', '~> 2.4.1'
 gem "twitter-bootstrap-rails"
 gem 'sprockets', '2.12.3'
+gem 'active_model_serializers', '0.9.3'
 gem 'therubyracer'
 gem 'whenever', :require => false
 gem 'httparty'
