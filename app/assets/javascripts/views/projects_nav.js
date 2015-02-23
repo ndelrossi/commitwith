@@ -42,8 +42,8 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
   },
 
   displayError: function(messageText) {
-    errorView = new Commitwith.Views.Errors({message: messageText});
-    $('#errors-container').append(errorView.render().el);
+    alertView = new Commitwith.Views.Alerts({message: messageText});
+    $('#alerts-container').append(alertView.render().el);
   },
 
   checkRepoURL: function() {
@@ -54,7 +54,7 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
     repo.fetch({
       success: function() {
         if (self.collection.has_project(repo.get('name')) == true) {
-          self.displayError("Repo already exists");
+          self.displayError("Project already exists");
           return;
         }
         if (repo.get('private') == false) {

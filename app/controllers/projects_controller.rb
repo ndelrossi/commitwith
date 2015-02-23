@@ -10,8 +10,11 @@ class ProjectsController < ApplicationController
   def activate
     if @project = Project.find_by_auth_token(params[:id])
       @project.update_attribute(:active, true)
+      @alert = "new"
+    else
+      @alert = "not_found"
     end
-    redirect_to root_url
+    redirect_to action: 'index', alert: @alert
   end
 
   def create

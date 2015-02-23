@@ -1,7 +1,7 @@
-Commitwith.Views.Errors = Backbone.View.extend({
-  template: JST['layout/errors'],
+Commitwith.Views.Alerts = Backbone.View.extend({
+  template: JST['layout/alerts'],
 
-  className: '.errors',
+  className: '.alerts',
 
   events: {
     'click #alert-close': 'removeAlert'
