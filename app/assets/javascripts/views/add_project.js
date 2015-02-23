@@ -32,16 +32,7 @@ Commitwith.Views.AddProject = Backbone.View.extend({
       last_update: this.repo.get("updated_at")
     };
     this.collection.create(new_model);
-    Commitwith.OriginalProjects.add(new_model);
     this.remove();
-  },
-
-  getSkill: function() {
-    var skill = new Array();
-    $(".checkbox-skill:checked").each(function() {
-      skill.push($(this).val());
-    });
-    return skill.toString();
   },
 
   setUpMultiSelects: function() {
