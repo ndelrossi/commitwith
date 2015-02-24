@@ -31,8 +31,9 @@ class ProjectsController < ApplicationController
   def destroy
     if @project = Project.find_by_auth_token(params[:id])
       @project.destroy
+      @alert = "delete"
     end
-    redirect_to root_url
+    redirect_to action: 'index', alert: @alert
   end
 
   private

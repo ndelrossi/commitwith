@@ -14,14 +14,16 @@ Commitwith.Views.Alerts = Backbone.View.extend({
       "new": "Project added.",
       "not_found": "Project not found. Please try adding again.",
       "project_exists": "Project already exists.",
-      "repo_private": "Github repository needs to be public."
+      "repo_private": "Github repository needs to be public.",
+      "delete": "Project has been removed."
     };
 
     this.alertClasses = {
       "new": "success",
       "not_found": "danger",
       "project_exists": "danger",
-      "repo_private": "danger"
+      "repo_private": "danger",
+      "delete": "warning"
     };
   },
 
