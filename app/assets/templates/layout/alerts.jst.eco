@@ -1,4 +1,4 @@
-<div class="alert alert-danger alert-dismissible" role="alert">
+<div class="alert alert-<%= @alertClass %> alert-dismissible" role="alert">
   <button id="alert-close" type="button" class="close">
     <span aria-hidden="true">&times;</span>
   </button>
