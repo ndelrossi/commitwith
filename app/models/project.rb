@@ -5,7 +5,11 @@ class Project < ActiveRecord::Base
   scope :active, -> { where(active: true) }
 
   def send_activation
-    ProjectMailer.project_control(self).deliver
+    if Rails.env.production?
+      ProjectMailer.project_control(self).deliver
+    else
+      self.update_attributes(active: true)
+    end 
   end
 
   def generate_token(column)
