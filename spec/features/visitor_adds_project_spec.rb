@@ -9,6 +9,8 @@ feature "Visitor adds project" do
   scenario "vistor adds project with valid info", js: true do
     add_project("octopress", "imathis")
     click_button "modal-add-project"
+    wait_for_ajax
+    visit root_path
 
     expect(page).to have_content("octopress")
   end
@@ -17,7 +19,7 @@ feature "Visitor adds project" do
     add_project("fakerepo", "fakename")
 
     expect(page).to have_css("div.alert-danger")
-    expect(page).to have_content("Repo not found")
+    expect(page).to have_content("Could not find repo with that name and owner")
     expect(page).not_to have_content("fakerepo")
   end
   

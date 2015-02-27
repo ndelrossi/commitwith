@@ -15,6 +15,7 @@ Commitwith.Views.Alerts = Backbone.View.extend({
       "not_found": "Project not found. Please try adding again.",
       "project_exists": "Project already exists.",
       "repo_private": "Github repository needs to be public.",
+      "repo_not_found": "Could not find repo with that name and owner.",
       "delete": "Project has been removed."
     };
 
@@ -23,6 +24,7 @@ Commitwith.Views.Alerts = Backbone.View.extend({
       "not_found": "danger",
       "project_exists": "danger",
       "repo_private": "danger",
+      "repo_not_found": "danger",
       "delete": "warning"
     };
   },

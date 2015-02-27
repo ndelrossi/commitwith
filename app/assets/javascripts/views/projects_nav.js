@@ -64,7 +64,7 @@ Commitwith.Views.ProjectsNav = Backbone.View.extend({
         }
       },
       error: function() {
-        self.displayError("Repo not found or repo is private");
+        self.displayError("repo_not_found");
       },
     });
   }
