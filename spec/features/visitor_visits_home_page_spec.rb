@@ -8,7 +8,7 @@ feature "Visitor visits home page" do
   end
 
   scenario "visitor sees project listed", js:true do
-    create(:project, name: "rails", author: "rails")
+    create(:project, name: "rails", author: "rails", active: true)
 
     visit root_path
 
@@ -16,8 +16,8 @@ feature "Visitor visits home page" do
   end
 
   scenario "visitor sees a count for how many projects listed", js:true do
-    create(:project, name: "rails", author: "rails")
-    create(:project, name: "commitwith", author: "ndelrossi")
+    create(:project, name: "rails", author: "rails", active: true)
+    create(:project, name: "commitwith", author: "ndelrossi", active: true)
 
     visit root_path
 

@@ -1,5 +1,8 @@
 require 'rails_helper'
 
+# These tests connect to GitHub API and will start failing when GitHub's API limit has been reached.
+# Todo: Find a way to stub out the API calls from backbone
+
 feature "Visitor adds project" do
 
   before do
@@ -24,13 +27,15 @@ feature "Visitor adds project" do
   end
   
   scenario "vistor tries to add project that already exists", js: true do
-    add_project("commitwith", "ndelrossi")
+    add_project("node", "joyent")
     click_button "modal-add-project"
-    add_project("commitwith", "ndelrossi")
+    wait_for_ajax
+    visit root_path
+    add_project("node", "joyent")
 
     expect(page).to have_css("div.alert-danger")
-    expect(page).to have_content("Repo already exists")
-    expect(page).to have_content("commitwith", count: 1)
+    expect(page).to have_content("Project already exists")
+    expect(page).to have_content("node", count: 1)
   end
 
   scenario "vistor finds repo and sees primary language pre-loaded", js: true do
