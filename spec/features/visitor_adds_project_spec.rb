@@ -40,6 +40,7 @@ feature "Visitor adds project" do
 
   scenario "vistor finds repo and sees primary language pre-loaded", js: true do
     add_project("commitwith", "ndelrossi")
+    wait_for_ajax
 
     expect(page).to have_content("Ruby")
   end

@@ -1,6 +1,8 @@
 FactoryGirl.define do
   factory :project do
 
+  active true
+
     factory :foo do
       name "foo"
       author "ndelrossi"
