@@ -21,13 +21,14 @@ Copy(don't rename) config/database.yml.example to config/database.yml and edit w
 $ rake db:create
 $ rake db:migrate
 ```
-If you want to seed the database with some projects, run:
+Run this if you want to seed the database with some projects. Note: This will delete all projects first.
 ```
 $ rake db:seed
 ```
 ## Notes
 
  * Confirmation email for new projects is only sent on production
+ * last_update attribute will only auto-update in production
 
 ## Testing
 
@@ -45,5 +46,5 @@ Contributions are welcome from developers of any level. Check the open issues to
  * Create a new branch for your feature or bug fix
  * Write your code and make sure tests are passing
  * Open a pull request
- 
+
  If you have any questions email nickwtf@gmail.com
