@@ -46,5 +46,4 @@ Contributions are welcome from developers of any level. Check the open issues to
  * Write your code and make sure tests are passing
  * Open a pull request
  
- 
  If you have any questions email nickwtf@gmail.com
