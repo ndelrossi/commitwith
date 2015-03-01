@@ -43,7 +43,7 @@ Contributions are welcome from developers of any level. Check the open issues to
 
  * Fork the repository and clone it locally
  * Create a new branch for your feature or bug fix
- * Write your code and make sure tests are passing.
+ * Write your code and make sure tests are passing
  * Open a pull request
  
  
