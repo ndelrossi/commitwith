@@ -1,4 +1,7 @@
 Project.destroy_all
 
-Project.create(title: "commitwith", author: "ndelrossi")
-Project.create(title: "vegan_eats_boston", author: "ndelrossi")
+Project.create(name:"commitwith",author:"ndelrossi",categories:"Web",beginner:"Yes",description:"A website that helps people find open source projects",languages:"Ruby,JavaScript",size:724,open_issues:0,last_update:"2015-03-01T16:54:04Z",needs:"Everything",active:true, email:"fake@fake.com")
+Project.create(name:"node",author:"joyent",categories:"Web",beginner:"Yes",description:"evented I/O for v8 javascript",languages:"JavaScript",size:326832,open_issues:1112,last_update:"2015-03-01T18:50:22Z",needs:"Enhancements, Bug Fixes",active:true, email:"fake@fake.com")
+Project.create(name:"rails",author:"rails",categories:"Web",beginner:"Yes",description:"Ruby on Rails",languages:"Ruby",size:381615,open_issues:715,last_update:"2015-03-01T19:22:13Z",needs:"Documentation",active:true, email:"fake@fake.com")
+Project.create(name:"joda-time-android",author:"dlew",categories:"Android,Utility",beginner:"No",description:"Joda-Time library with Android specialization",languages:"Java,Python",size:2573,open_issues:4,last_update:"2015-03-01T10:23:47Z",needs:"Testing, Documentation",active:true, email:"fake@fake.com")
+Project.create(name:"glide",author:"bumptech",categories:"Android,Utility",beginner:"No",description:"An image loading and caching library for Android focused on smooth scrolling",languages:"Java",size:22908,open_issues:57,last_update:"2015-02-28T17:48:32Z",needs:"Features, Bug Fixes, Documentation",active:true, email:"fake@fake.com")
