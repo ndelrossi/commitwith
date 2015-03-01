@@ -15,9 +15,15 @@ Commitwith.com is a webapp that helps developers find open source projects.
 $ git clone https://github.com/ndelrossi/commitwith.git
 $ cd commitwith
 $ bundle install
-
-$ rake db:populate ???
-
+```
+Copy(don't rename) config/database.yml.example to config/database.yml and edit with your database settings.
+```
+$ rake db:create
+$ rake db:migrate
+```
+If you want to seed the database with some projects, run:
+```
+$ rake db:seed
 ```
 ## Notes
 
