@@ -35,5 +35,12 @@ FactoryGirl.define do
       open_issues 50
       beginner "Yes"
     end
+
+    factory :inactive_project do
+      name "foo"
+      author "fakeauthor"
+      email "fake@fake.com"
+      active false
+    end
   end
 end

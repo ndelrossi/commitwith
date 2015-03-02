@@ -14,6 +14,13 @@ describe Project do
     end
   end
 
+  describe "new" do
+    subject { create(:inactive_project) }
+
+    it { is_expected.to be_valid }
+    it { is_expected.not_to be_active }
+  end
+
   describe "#send_activation" do
     let(:project) { create(:project, email: "fake@fake.com") }
 
