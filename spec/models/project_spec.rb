@@ -24,4 +24,14 @@ describe Project do
       expect(last_email_recipient).to eq ([project.email])  
     end  
   end
+
+  describe "#generate_token(column)" do
+    let(:project) { create(:project) }
+
+    it "generates a token" do
+      project.auth_token = nil
+      project.send(:generate_token, :auth_token)
+      expect(project.auth_token).to be_present
+    end
+  end
 end
