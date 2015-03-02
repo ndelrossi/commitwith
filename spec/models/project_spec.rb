@@ -41,4 +41,19 @@ describe Project do
       expect(project.auth_token).to be_present
     end
   end
+
+  describe ".update_info" do
+    let! (:project) { create(:project, size: 1, open_issues: 1, last_update: "2015-01-01T10:23:47Z") }
+
+    it "connects to GitHub API and updates project info" do
+      Project.update_info
+
+      pending("This test needs to be fixed")
+      fail
+
+      #expect(project.size).to eq 1000
+      #expect(project.open_issues).to eq 10
+      #expect(project.last_update).to eq "2015-03-01T10:23:47Z"
+    end
+  end
 end

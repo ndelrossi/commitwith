@@ -66,8 +66,9 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do
-    stub_request(:get, /api.github.com/).
-      with(headers: {'Accept'=>'*/*', 'User-Agent'=>'Ruby'}).
-      to_return(status: 200, body: "stubbed response", headers: {})
+    json = {size: 1000, open_issues_count: 10, updated_at: "2015-03-01T10:23:47Z"}.to_json
+    stub_request(:get, "https://api.github.com/repos//").
+      with(:headers => {'Accept'=>'*/*', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'User-Agent'=>'Ruby'}).
+      to_return(:status => 200, :body => json, :headers => {'Content-Type' => 'application/json'})
   end
 end
