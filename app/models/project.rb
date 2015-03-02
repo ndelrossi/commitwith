@@ -5,7 +5,7 @@ class Project < ActiveRecord::Base
   scope :active, -> { where(active: true) }
 
   def send_activation
-    if Rails.env.production?
+    if Rails.env.production? || Rails.env.test?
       ProjectMailer.project_control(self).deliver
     else
       self.update_attributes(active: true)

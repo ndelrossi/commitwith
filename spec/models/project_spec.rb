@@ -13,4 +13,15 @@ describe Project do
       end
     end
   end
+
+  describe "#send_activation" do
+    let(:project) { create(:project, email: "fake@fake.com") }
+
+    before { project.send_activation }
+  
+    it "delivers email to project email" do  
+      last_email_recipient = ActionMailer::Base.deliveries.last.to
+      expect(last_email_recipient).to eq ([project.email])  
+    end  
+  end
 end
